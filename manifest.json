@@ -1,7 +1,7 @@
 {
-  "name": "英文學習 App v4 發音判斷版",
+  "name": "英文學習 App v5 生活3000詞庫版",
   "short_name": "英文學習",
-  "start_url": "./?v=4",
+  "start_url": "./?v=5",
   "display": "standalone",
   "background_color": "#eef5ff",
   "theme_color": "#2563eb",

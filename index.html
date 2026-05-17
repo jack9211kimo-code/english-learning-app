@@ -4,537 +4,74 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#2563eb" />
-  <title>英文學習 App v4 發音判斷版</title>
+  <title>英文學習 App v5 生活3000詞庫版</title>
   <link rel="manifest" href="manifest.json" />
+  <script src="wordbank.js?v=5"></script>
   <style>
-    :root{
-      --bg:#eef5ff;--card:#fff;--text:#101828;--muted:#667085;--blue:#2563eb;
-      --blue2:#1d4ed8;--line:#dbe7ff;--green:#dcfce7;--greenText:#166534;
-      --red:#fee2e2;--redText:#991b1b;--yellow:#fef9c3;--yellowText:#854d0e;
-      --purple:#f3e8ff;--purpleText:#6b21a8;
-      --shadow:0 18px 40px rgba(30,64,175,.14);--radius:26px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#eef6ff,#f8fbff);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif}
-    body{min-height:100vh;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}
-    .app{max-width:680px;margin:0 auto}
-    .top{padding:18px 4px 10px}
-    .title{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:900;letter-spacing:.5px}
-    .badge{font-size:13px;font-weight:900;color:#fff;background:var(--blue);border-radius:999px;padding:5px 10px}
-    .sub{color:var(--muted);font-size:15px;margin-top:4px;line-height:1.5}
-    .tabs{display:flex;gap:10px;overflow:auto;padding:10px 0 16px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#eef6ff 75%,rgba(238,246,255,0))}
-    .tab{border:0;white-space:nowrap;border-radius:999px;padding:13px 18px;background:#fff;color:#667085;font-size:17px;font-weight:900;box-shadow:0 6px 18px rgba(16,24,40,.06)}
-    .tab.active{background:var(--blue);color:#fff}
-    .card{background:rgba(255,255,255,.96);border:1px solid rgba(219,231,255,.95);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-bottom:18px}
-    .sectionTitle{font-size:28px;font-weight:950;display:flex;gap:10px;align-items:center;margin:0 0 6px}
-    .desc{font-size:18px;color:var(--muted);line-height:1.5;margin:0 0 18px}
-    .bigword{font-size:56px;line-height:1.05;text-align:center;font-weight:950;margin:22px 0 10px;letter-spacing:-1px}
-    .zh{font-size:25px;font-weight:900;text-align:center;margin:8px 0 14px}
-    .emoji{font-size:76px;text-align:center;line-height:1.1;margin:16px 0 10px}
-    .hint{font-size:17px;text-align:center;color:var(--muted);line-height:1.45;margin:0 0 16px}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{width:100%;border:0;border-radius:22px;background:var(--blue);color:#fff;padding:18px 18px;font-size:22px;font-weight:950;box-shadow:0 10px 24px rgba(37,99,235,.25)}
-    .btn:active{transform:translateY(1px)}
-    .btn.secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:0 8px 20px rgba(16,24,40,.05)}
-    .btn.small{width:auto;font-size:16px;padding:11px 14px;border-radius:16px}
-    .btn.danger{background:#ef4444}
-    .options{display:grid;gap:14px;margin-top:18px}
-    .option{width:100%;text-align:left;border:1.5px solid var(--line);border-radius:22px;background:#fff;padding:18px 20px;font-size:22px;font-weight:950;color:var(--text);box-shadow:0 8px 18px rgba(16,24,40,.04)}
-    .option.correct{background:var(--green);border-color:#86efac;color:var(--greenText)}
-    .option.wrong{background:var(--red);border-color:#fca5a5;color:var(--redText)}
-    .pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-weight:900;padding:8px 11px;font-size:14px;margin:4px 4px 4px 0}
-    .pill.purple{background:var(--purple);color:var(--purpleText)}
-    .notice{border-radius:20px;background:var(--yellow);color:var(--yellowText);padding:14px 15px;font-size:16px;font-weight:800;line-height:1.45;margin:12px 0}
-    .result{font-size:23px;font-weight:950;text-align:center;margin:16px 0}
-    .answerBox{display:none;background:#f8fbff;border:1px dashed #bad3ff;border-radius:22px;padding:16px;margin-top:16px}
-    .answerBox.show{display:block}
-    .answerGrid{display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:center}
-    .answerEmoji{font-size:54px;text-align:center}
-    .example{font-size:17px;line-height:1.55;color:#344054}
-    .mini{font-size:14px;color:var(--muted);line-height:1.5}
-    .progress{height:12px;background:#e5eefc;border-radius:999px;overflow:hidden;margin:14px 0}
-    .bar{height:100%;background:linear-gradient(90deg,#2563eb,#60a5fa);width:0%}
-    .list{display:grid;gap:10px}
-    .wordItem{border:1px solid var(--line);background:#fff;border-radius:20px;padding:16px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
-    .wordItem .e{font-size:22px;font-weight:950}
-    .wordItem .m{font-size:15px;color:var(--muted);margin-top:3px}
-    input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:18px;padding:15px;font-size:18px;background:#fff;color:var(--text)}
-    label{font-size:15px;font-weight:900;color:#475467;margin:13px 0 6px;display:block}
-    .hidden{display:none!important}
-    .footer{text-align:center;color:#667085;font-size:14px;line-height:1.6;margin:24px 0}
-    .modeBox{display:grid;gap:10px;margin:12px 0 2px}
-    .mode{border:1.5px solid var(--line);background:#fff;border-radius:20px;padding:15px;text-align:left}
-    .mode b{font-size:18px}
-    .mode span{display:block;color:var(--muted);font-size:14px;line-height:1.45;margin-top:3px}
-    .mode.active{border-color:#2563eb;background:#eff6ff}
-    .scoreCircle{width:138px;height:138px;border-radius:50%;background:#eff6ff;border:10px solid #bfdbfe;display:flex;align-items:center;justify-content:center;margin:16px auto 10px;font-size:34px;font-weight:950;color:#1d4ed8}
-    .listenBox{background:#f8fbff;border:1px solid var(--line);border-radius:22px;padding:16px;margin-top:14px}
-    .heard{font-size:24px;font-weight:950;text-align:center;margin:12px 0;color:#111827}
-    .levelGood{background:var(--green)!important;color:var(--greenText)!important;border-color:#86efac!important}
-    .levelOk{background:var(--yellow)!important;color:var(--yellowText)!important;border-color:#fde68a!important}
-    .levelBad{background:var(--red)!important;color:var(--redText)!important;border-color:#fca5a5!important}
-    @media (max-width:380px){
-      .bigword{font-size:46px}
-      .sectionTitle{font-size:24px}
-      .option,.btn{font-size:19px}
-      .tab{font-size:16px;padding:12px 15px}
-    }
+    :root{--bg:#eef5ff;--card:#fff;--text:#101828;--muted:#667085;--blue:#2563eb;--line:#dbe7ff;--green:#dcfce7;--greenText:#166534;--red:#fee2e2;--redText:#991b1b;--yellow:#fef9c3;--yellowText:#854d0e;--shadow:0 18px 40px rgba(30,64,175,.14);--radius:26px}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:linear-gradient(180deg,#eef6ff,#f8fbff);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif} body{min-height:100vh;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}.app{max-width:760px;margin:0 auto}.top{padding:18px 4px 10px}.title{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:950;letter-spacing:.2px;flex-wrap:wrap}.badge{font-size:13px;font-weight:950;color:#fff;background:var(--blue);border-radius:999px;padding:5px 10px}.sub{color:var(--muted);font-size:15px;margin-top:4px;line-height:1.5}.tabs{display:flex;gap:10px;overflow:auto;padding:10px 0 16px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#eef6ff 75%,rgba(238,246,255,0))}.tab{border:0;white-space:nowrap;border-radius:999px;padding:13px 17px;background:#fff;color:#667085;font-size:17px;font-weight:950;box-shadow:0 6px 18px rgba(16,24,40,.06)}.tab.active{background:var(--blue);color:#fff}.card{background:rgba(255,255,255,.97);border:1px solid rgba(219,231,255,.95);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-bottom:18px}.sectionTitle{font-size:27px;font-weight:950;display:flex;gap:10px;align-items:center;margin:0 0 6px}.desc{font-size:17px;color:var(--muted);line-height:1.5;margin:0 0 18px}.bigword{font-size:50px;line-height:1.08;text-align:center;font-weight:950;margin:22px 0 10px;letter-spacing:-1px;word-break:break-word}.zh{font-size:25px;font-weight:900;text-align:center;margin:8px 0 14px}.emoji{font-size:72px;text-align:center;line-height:1.1;margin:16px 0 10px}.hint{font-size:17px;text-align:center;color:var(--muted);line-height:1.45;margin:0 0 16px}.row{display:flex;gap:10px;flex-wrap:wrap}.btn{width:100%;border:0;border-radius:22px;background:var(--blue);color:#fff;padding:17px 18px;font-size:21px;font-weight:950;box-shadow:0 10px 24px rgba(37,99,235,.25)}.btn:active{transform:translateY(1px)}.btn.secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:0 8px 20px rgba(16,24,40,.05)}.btn.small{width:auto;font-size:16px;padding:11px 14px;border-radius:16px}.btn.danger{background:#ef4444}.options{display:grid;gap:14px;margin-top:18px}.option{width:100%;text-align:left;border:1.5px solid var(--line);border-radius:22px;background:#fff;padding:18px 20px;font-size:22px;font-weight:950;color:var(--text);box-shadow:0 8px 18px rgba(16,24,40,.04)}.option.correct{background:var(--green);border-color:#86efac;color:var(--greenText)}.option.wrong{background:var(--red);border-color:#fca5a5;color:var(--redText)}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-weight:900;padding:8px 11px;font-size:14px;margin:4px 4px 4px 0}.notice{border-radius:20px;background:var(--yellow);color:var(--yellowText);padding:14px 15px;font-size:16px;font-weight:850;line-height:1.45;margin:12px 0}.result{font-size:23px;font-weight:950;text-align:center;margin:16px 0}.answerBox{display:none;background:#f8fbff;border:1px dashed #bad3ff;border-radius:22px;padding:16px;margin-top:16px}.answerBox.show{display:block}.answerGrid{display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:center}.answerEmoji{font-size:54px;text-align:center}.example{font-size:17px;line-height:1.55;color:#344054}.mini{font-size:14px;color:var(--muted);line-height:1.5}.progress{height:12px;background:#e5eefc;border-radius:999px;overflow:hidden;margin:14px 0}.bar{height:100%;background:linear-gradient(90deg,#2563eb,#60a5fa);width:0%}.list{display:grid;gap:10px}.wordItem{border:1px solid var(--line);background:#fff;border-radius:20px;padding:16px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}.wordItem .e{font-size:21px;font-weight:950;word-break:break-word}.wordItem .m{font-size:15px;color:var(--muted);margin-top:3px;line-height:1.4}input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:18px;padding:15px;font-size:18px;background:#fff;color:var(--text)}label{font-size:15px;font-weight:900;color:#475467;margin:13px 0 6px;display:block}.hidden{display:none!important}.footer{text-align:center;color:#667085;font-size:14px;line-height:1.6;margin:24px 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modeBox{display:grid;gap:10px;margin:12px 0 2px}.mode{border:1.5px solid var(--line);background:#fff;border-radius:20px;padding:15px;text-align:left}.mode b{font-size:18px}.mode span{display:block;color:var(--muted);font-size:14px;line-height:1.45;margin-top:3px}.mode.active{border-color:#2563eb;background:#eff6ff}.statGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{background:#f8fbff;border:1px solid var(--line);border-radius:18px;padding:14px;text-align:center}.stat b{display:block;font-size:25px}.dialogue{white-space:pre-line;font-size:16px;line-height:1.55;background:#f8fbff;border-radius:18px;padding:14px;margin-top:8px}.filterBar{display:grid;grid-template-columns:1fr 140px;gap:10px;margin:12px 0}@media(max-width:420px){.bigword{font-size:42px}.sectionTitle{font-size:24px}.option,.btn{font-size:19px}.tab{font-size:16px;padding:12px 15px}.grid2,.filterBar{grid-template-columns:1fr}.statGrid{grid-template-columns:1fr 1fr}.card{padding:18px}.answerGrid{grid-template-columns:64px 1fr}.emoji{font-size:62px}}
   </style>
 </head>
 <body>
 <div class="app">
-  <div class="top">
-    <div class="title">📘 英文學習 App <span class="badge">v4 發音判斷版</span></div>
-    <div class="sub">新增麥克風練發音：你念英文，系統會辨識成文字，再和目標單字比對。</div>
-  </div>
-
+  <div class="top"><div class="title">📘 英文學習 App <span class="badge">v5 生活3000詞庫</span></div><div class="sub">保留原有功能：單字卡、真測驗、錯題、句型/對話、新增、發音判斷、收藏、進度。新增 3000 筆生活詞彙/片語題庫。</div></div>
   <div class="tabs">
-    <button class="tab active" data-tab="cards">單字卡</button>
-    <button class="tab" data-tab="quiz">測驗</button>
-    <button class="tab" data-tab="pronounce">發音</button>
-    <button class="tab" data-tab="wrong">錯題</button>
-    <button class="tab" data-tab="phrases">句型</button>
-    <button class="tab" data-tab="add">新增</button>
+    <button class="tab active" data-tab="cards">單字卡</button><button class="tab" data-tab="quiz">測驗</button><button class="tab" data-tab="speak">發音</button><button class="tab" data-tab="wrong">錯題</button><button class="tab" data-tab="phrases">句型</button><button class="tab" data-tab="library">詞庫</button><button class="tab" data-tab="add">新增</button>
   </div>
 
-  <section id="cards" class="page">
-    <div class="card">
-      <h1 class="sectionTitle">🧠 圖像單字卡</h1>
-      <p class="desc">這裡可以看圖記憶；真正測驗頁會把圖片藏起來。</p>
-      <div class="progress"><div class="bar" id="cardBar"></div></div>
-      <div id="cardEmoji" class="emoji"></div>
-      <div id="cardWord" class="bigword"></div>
-      <div id="cardPhonetic" class="hint"></div>
-      <div id="cardZh" class="zh"></div>
-      <div id="cardMemory" class="hint"></div>
-      <div class="row">
-        <button class="btn small secondary" id="speakCard">🔊 發音</button>
-        <button class="btn small secondary" id="favCard">⭐ 收藏</button>
-        <button class="btn small secondary" id="knownCard">✅ 已會</button>
-      </div>
-      <button class="btn" id="nextCard" style="margin-top:14px">下一個單字</button>
-    </div>
-  </section>
+  <section id="cards" class="page"><div class="card"><h1 class="sectionTitle">🧠 圖像單字卡</h1><p class="desc">背單字時顯示圖片記憶；測驗時不會偷給答案。</p><div class="filterBar"><input id="cardSearch" placeholder="搜尋單字 / 中文"><select id="cardCat"></select></div><div class="progress"><div class="bar" id="cardBar"></div></div><span class="pill" id="cardType"></span><div id="cardEmoji" class="emoji"></div><div id="cardWord" class="bigword"></div><div id="cardZh" class="zh"></div><div id="cardMemory" class="hint"></div><div class="row"><button class="btn small secondary" id="speakCard">🔊 發音</button><button class="btn small secondary" id="favCard">⭐ 收藏</button><button class="btn small secondary" id="knownCard">✅ 已會</button></div><button class="btn" id="nextCard" style="margin-top:14px">下一個</button></div></section>
 
-  <section id="quiz" class="page hidden">
-    <div class="card">
-      <h1 class="sectionTitle">🎯 真正測驗</h1>
-      <p class="desc">題目中不顯示圖像提示，答完才顯示圖片幫你加深印象。</p>
-      <div class="notice">圖片只會在答完後出現，避免看圖秒選。</div>
-      <div class="modeBox">
-        <button class="mode active" data-mode="mixed"><b>混合測驗</b><span>英文選中文、中文選英文、聽力隨機出題。</span></button>
-        <button class="mode" data-mode="en2zh"><b>看英文選中文</b><span>不給圖片，靠單字本身判斷。</span></button>
-        <button class="mode" data-mode="zh2en"><b>看中文選英文</b><span>訓練主動回想英文。</span></button>
-        <button class="mode" data-mode="listening"><b>聽發音選中文</b><span>先聽聲音，不看英文。</span></button>
-      </div>
-      <div style="margin-top:18px">
-        <span class="pill" id="quizType">題型</span>
-        <span class="pill" id="scorePill">0 / 0</span>
-      </div>
-      <div id="questionArea">
-        <div id="questionMain" class="bigword"></div>
-        <div id="questionSub" class="hint"></div>
-      </div>
-      <div class="options" id="options"></div>
-      <div id="result" class="result"></div>
-      <div id="answerBox" class="answerBox">
-        <div class="answerGrid">
-          <div id="answerEmoji" class="answerEmoji"></div>
-          <div>
-            <div id="answerWord" style="font-size:26px;font-weight:950"></div>
-            <div id="answerMeaning" style="font-size:18px;font-weight:900;color:#475467;margin-top:4px"></div>
-            <div id="answerMemory" class="mini" style="margin-top:8px"></div>
-          </div>
-        </div>
-        <div id="answerExample" class="example" style="margin-top:12px"></div>
-      </div>
-      <button class="btn" id="nextQuiz" style="margin-top:16px">下一題</button>
-    </div>
-  </section>
+  <section id="quiz" class="page hidden"><div class="card"><h1 class="sectionTitle">🎯 真測驗</h1><p class="desc">測驗時不顯示圖片、不顯示記憶提示。答完才顯示。</p><div class="modeBox"><button class="mode active" data-mode="mixed"><b>混合測驗</b><span>英文選中文、中文選英文、聽力隨機。</span></button><button class="mode" data-mode="en2zh"><b>看英文選中文</b><span>靠英文判斷意思。</span></button><button class="mode" data-mode="zh2en"><b>看中文選英文</b><span>訓練主動回想。</span></button><button class="mode" data-mode="listening"><b>聽發音選中文</b><span>先聽聲音，不看英文。</span></button></div><div><span class="pill" id="quizType">題型</span><span class="pill" id="scorePill">0 / 0</span><span class="pill" id="quizBankSize">3000</span></div><div id="questionMain" class="bigword"></div><div id="questionSub" class="hint"></div><div class="options" id="options"></div><div id="result" class="result"></div><div id="answerBox" class="answerBox"><div class="answerGrid"><div id="answerEmoji" class="answerEmoji"></div><div><div id="answerWord" style="font-size:25px;font-weight:950"></div><div id="answerMeaning" style="font-size:18px;font-weight:900;color:#475467;margin-top:4px"></div><div id="answerMemory" class="mini" style="margin-top:8px"></div></div></div><div id="answerExample" class="example" style="margin-top:12px"></div></div><button class="btn" id="nextQuiz" style="margin-top:16px">下一題</button></div></section>
 
-  <section id="pronounce" class="page hidden">
-    <div class="card">
-      <h1 class="sectionTitle">🎙️ 發音判斷</h1>
-      <p class="desc">按「開始錄音」後念出單字。系統會把你說的英文轉成文字，再判斷是否接近目標。</p>
-      <div class="notice" id="speechSupport">正在檢查語音辨識支援度...</div>
-      <div class="progress"><div class="bar" id="pronBar"></div></div>
-      <div id="pronEmoji" class="emoji"></div>
-      <div id="pronWord" class="bigword"></div>
-      <div id="pronMeaning" class="zh"></div>
-      <div id="pronPhonetic" class="hint"></div>
-      <div class="row">
-        <button class="btn small secondary" id="speakPron">🔊 聽標準音</button>
-        <button class="btn small secondary" id="nextPron">換一題</button>
-      </div>
-      <button class="btn" id="startPron" style="margin-top:14px">🎙️ 開始錄音</button>
-      <div class="listenBox">
-        <div class="mini">你剛剛被辨識成：</div>
-        <div id="heardText" class="heard">尚未錄音</div>
-        <div id="pronScore" class="scoreCircle">--</div>
-        <div id="pronFeedback" class="result">按開始錄音後，清楚念一次。</div>
-      </div>
-      <div class="notice">
-        注意：這不是專業音標評分，只能判斷「瀏覽器聽起來像不像這個單字」。但拿來練習基本發音很夠用。
-      </div>
-    </div>
-  </section>
+  <section id="speak" class="page hidden"><div class="card"><h1 class="sectionTitle">🎙️ 發音判斷</h1><p class="desc">按標準音，再按錄音念出來。分數是瀏覽器語音辨識的相似度，不等於真人老師評分。</p><div class="notice" id="speechSupport"></div><div class="emoji" id="speakEmoji"></div><div class="bigword" id="speakWord"></div><div class="zh" id="speakMeaning"></div><div class="row"><button class="btn small secondary" id="playSpeak">🔊 標準音</button><button class="btn small secondary" id="nextSpeak">換一題</button></div><button class="btn" id="recordBtn" style="margin-top:14px">🎤 開始錄音</button><div class="answerBox show"><div class="mini">辨識結果：</div><div id="heard" style="font-size:22px;font-weight:950;margin-top:4px">尚未錄音</div><div id="pronScore" class="result"></div><div class="mini">小技巧：先慢慢念，再接近正常速度。短字如 bus、tea、key 容易被系統聽錯，多測幾次。</div></div></div></section>
 
-  <section id="wrong" class="page hidden">
-    <div class="card">
-      <h1 class="sectionTitle">🧯 錯題複習</h1>
-      <p class="desc">答錯的單字會出現在這裡。多複習幾次，比一直背新單字有效。</p>
-      <div id="wrongList" class="list"></div>
-      <button class="btn secondary" id="clearWrong" style="margin-top:14px">清空錯題</button>
-    </div>
-  </section>
+  <section id="wrong" class="page hidden"><div class="card"><h1 class="sectionTitle">🧯 錯題複習</h1><p class="desc">答錯的單字會出現在這裡。</p><div id="wrongList" class="list"></div><button class="btn secondary" id="clearWrong" style="margin-top:14px">清空錯題</button></div></section>
 
-  <section id="phrases" class="page hidden">
-    <div class="card">
-      <h1 class="sectionTitle">💬 生活句型</h1>
-      <p class="desc">先把常用句講順，再慢慢補文法。</p>
-      <div id="phraseList" class="list"></div>
-    </div>
-  </section>
+  <section id="phrases" class="page hidden"><div class="card"><h1 class="sectionTitle">💬 生活句型 / 情境對話</h1><p class="desc">新增情境對話，適合直接拿來跟讀。</p><div id="phraseList" class="list"></div></div></section>
 
-  <section id="add" class="page hidden">
-    <div class="card">
-      <h1 class="sectionTitle">➕ 新增單字</h1>
-      <p class="desc">自己遇到的單字可以加進來。圖片記憶可用 emoji。</p>
-      <label>英文</label><input id="newWord" placeholder="coffee">
-      <label>中文意思</label><input id="newMeaning" placeholder="咖啡">
-      <label>emoji 圖像記憶</label><input id="newEmoji" placeholder="☕">
-      <label>記憶提示</label><input id="newMemory" placeholder="看到 ☕ 想到 coffee">
-      <label>例句</label><textarea id="newExample" placeholder="I need a cup of coffee."></textarea>
-      <button class="btn" id="addWord" style="margin-top:16px">加入單字</button>
-    </div>
-  </section>
+  <section id="library" class="page hidden"><div class="card"><h1 class="sectionTitle">📚 3000 詞庫</h1><p class="desc">可搜尋、依分類查看。點發音可聽單字或片語。</p><div class="statGrid"><div class="stat"><b id="totalWords">0</b><span>總詞彙</span></div><div class="stat"><b id="knownCount">0</b><span>已會</span></div><div class="stat"><b id="favCount">0</b><span>收藏</span></div><div class="stat"><b id="wrongCount">0</b><span>錯題</span></div></div><div class="filterBar"><input id="libSearch" placeholder="搜尋 coffee / 咖啡 / 交通"><select id="libCat"></select></div><div id="libList" class="list"></div><button class="btn secondary" id="moreLib" style="margin-top:12px">顯示更多</button></div></section>
 
-  <div class="footer">
-    版本：v4.0 發音判斷版<br>
-    建議：每天 10 個單字 + 5 句生活句型 + 發音 5 分鐘。
-  </div>
+  <section id="add" class="page hidden"><div class="card"><h1 class="sectionTitle">➕ 新增自己的單字</h1><p class="desc">你自己遇到的單字也能加進來。</p><label>英文</label><input id="newWord" placeholder="coffee"><label>中文意思</label><input id="newMeaning" placeholder="咖啡"><label>emoji 圖像記憶</label><input id="newEmoji" placeholder="☕"><label>分類</label><input id="newCat" placeholder="自訂"><label>記憶提示</label><input id="newMemory" placeholder="看到 ☕ 想到 coffee"><label>例句</label><textarea id="newExample" placeholder="I need a cup of coffee."></textarea><button class="btn" id="addWord" style="margin-top:16px">加入單字</button></div></section>
+  <div class="footer">版本：v5.0 生活3000詞庫版｜不是照抄任何書籍，為原創生活詞彙＋片語題庫。<br>更新後建議用網址 ?v=5 開啟，避免手機快取舊版。</div>
 </div>
-
 <script>
-const baseWords = [
-  ["hello","你好","👋","看到打招呼的手，想到 hello。","Hello, nice to meet you.","/həˈloʊ/","生活"],
-  ["thanks","謝謝","🙏","有人幫你時說 thanks。","Thanks for your help.","/θæŋks/","生活"],
-  ["sorry","抱歉","🙇","做錯事時說 sorry。","Sorry, I am late.","/ˈsɑːri/","生活"],
-  ["please","請","🙏","拜託別人時加 please。","Please wait a minute.","/pliːz/","生活"],
-  ["water","水","💧","看到水滴想到 water。","I want some water.","/ˈwɔːtər/","飲食"],
-  ["coffee","咖啡","☕","看到咖啡杯想到 coffee。","I drink coffee every morning.","/ˈkɔːfi/","飲食"],
-  ["breakfast","早餐","🍳","早上吃蛋，想到 breakfast。","I eat breakfast at seven.","/ˈbrekfəst/","飲食"],
-  ["lunch","午餐","🍱","中午便當想到 lunch。","What do you want for lunch?","/lʌntʃ/","飲食"],
-  ["dinner","晚餐","🍽️","晚上吃 dinner。","Dinner is ready.","/ˈdɪnər/","飲食"],
-  ["menu","菜單","📋","點餐先看 menu。","Can I see the menu?","/ˈmenjuː/","飲食"],
-  ["price","價格","💰","買東西先看 price。","What is the price?","/praɪs/","購物"],
-  ["cheap","便宜的","🏷️","特價標籤想到 cheap。","This shirt is cheap.","/tʃiːp/","購物"],
-  ["expensive","昂貴的","💸","錢飛走，想到 expensive。","This phone is expensive.","/ɪkˈspensɪv/","購物"],
-  ["store","商店","🏪","便利商店就是 store。","The store is near my house.","/stɔːr/","購物"],
-  ["receipt","收據","🧾","買完拿 receipt。","Can I have a receipt?","/rɪˈsiːt/","購物"],
-  ["bus","公車","🚌","搭公車想到 bus。","I take the bus to work.","/bʌs/","交通"],
-  ["train","火車","🚆","火車就是 train。","The train is coming.","/treɪn/","交通"],
-  ["taxi","計程車","🚕","黃色車想到 taxi。","Let's take a taxi.","/ˈtæksi/","交通"],
-  ["station","車站","🚉","搭車去 station。","Where is the train station?","/ˈsteɪʃən/","交通"],
-  ["ticket","票","🎫","搭車看電影都要 ticket。","I need one ticket.","/ˈtɪkɪt/","交通"],
-  ["today","今天","📅","今天就是 today。","Today is Monday.","/təˈdeɪ/","時間"],
-  ["tomorrow","明天","➡️📅","下一天是 tomorrow。","See you tomorrow.","/təˈmɑːroʊ/","時間"],
-  ["yesterday","昨天","⬅️📅","前一天是 yesterday。","I was busy yesterday.","/ˈjestərdeɪ/","時間"],
-  ["morning","早上","🌅","太陽升起是 morning。","Good morning.","/ˈmɔːrnɪŋ/","時間"],
-  ["evening","傍晚；晚上","🌆","天色變暗是 evening。","I study English in the evening.","/ˈiːvnɪŋ/","時間"],
-  ["happy","開心的","😊","笑臉想到 happy。","I am happy today.","/ˈhæpi/","心情"],
-  ["tired","累的","😫","疲累臉想到 tired。","I am tired after work.","/ˈtaɪərd/","心情"],
-  ["hungry","餓的","😋","想吃東西就是 hungry。","I am hungry.","/ˈhʌŋɡri/","心情"],
-  ["busy","忙碌的","💼","工作很多就是 busy。","I am busy now.","/ˈbɪzi/","生活"],
-  ["help","幫助","🆘","需要幫忙喊 help。","Can you help me?","/help/","生活"],
-  ["problem","問題","❓","問號想到 problem。","We have a problem.","/ˈprɑːbləm/","生活"],
-  ["phone","手機；電話","📱","手機就是 phone。","My phone is on the table.","/foʊn/","生活"],
-  ["address","地址","🏠","住家位置是 address。","What is your address?","/əˈdres/","生活"],
-  ["bathroom","廁所","🚻","找廁所問 bathroom。","Where is the bathroom?","/ˈbæθruːm/","生活"],
-  ["doctor","醫生","👨‍⚕️","看病找 doctor。","I need to see a doctor.","/ˈdɑːktər/","生活"],
-  ["medicine","藥","💊","藥丸想到 medicine。","Take this medicine after meals.","/ˈmedɪsən/","生活"],
-  ["weather","天氣","🌤️","太陽雲想到 weather。","How is the weather?","/ˈweðər/","生活"],
-  ["umbrella","雨傘","☂️","下雨拿 umbrella。","Take an umbrella with you.","/ʌmˈbrelə/","生活"],
-  ["open","打開；營業","🔓","打開鎖想到 open。","Is the store open?","/ˈoʊpən/","生活"],
-  ["closed","關閉；打烊","🔒","關起來是 closed。","The shop is closed.","/kloʊzd/","生活"]
-].map((x,i)=>({id:"w"+i,word:x[0],meaning:x[1],emoji:x[2],memory:x[3],example:x[4],phonetic:x[5],cat:x[6]}));
-
-const phrases = [
-  ["Could you say that again?","你可以再說一次嗎？","聽不清楚"],
-  ["What does this word mean?","這個單字是什麼意思？","問意思"],
-  ["I am still learning English.","我還在學英文。","自我介紹"],
-  ["Let me think for a second.","讓我想一下。","爭取時間"],
-  ["Can you give me an example?","你可以給我一個例子嗎？","問例子"],
-  ["How much is it?","這個多少錢？","購物"],
-  ["Where is the bathroom?","廁所在哪裡？","問路"],
-  ["I would like this one.","我想要這個。","點餐購物"]
-];
-
-const LS = "english_app_v4_pronunciation";
-let state = load();
-let tab = "cards", cardIndex = 0, pronIndex = 0, quizMode = "mixed", current = null, answered = false;
-let score = {ok:0,total:0};
-let Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-let recognizer = null;
-
-function load(){
-  try{
-    const saved = JSON.parse(localStorage.getItem(LS) || "{}");
-    return {words: saved.words || baseWords, wrong: saved.wrong || {}, fav: saved.fav || {}, known: saved.known || {}, pron: saved.pron || {}};
-  }catch(e){ return {words:baseWords,wrong:{},fav:{},known:{},pron:{}}; }
-}
-function save(){ localStorage.setItem(LS, JSON.stringify(state)); }
-function $(id){ return document.getElementById(id); }
-function shuffle(a){ return [...a].sort(()=>Math.random()-.5); }
-function sample(arr,n){ return shuffle(arr).slice(0,n); }
-function normalize(s){
-  return (s || "").toLowerCase().replace(/[^a-z\s]/g," ").replace(/\s+/g," ").trim();
-}
-function levenshtein(a,b){
-  a=normalize(a); b=normalize(b);
-  const m=a.length,n=b.length;
-  if(!m && !n) return 0;
-  let dp=Array.from({length:m+1},()=>Array(n+1).fill(0));
-  for(let i=0;i<=m;i++) dp[i][0]=i;
-  for(let j=0;j<=n;j++) dp[0][j]=j;
-  for(let i=1;i<=m;i++){
-    for(let j=1;j<=n;j++){
-      dp[i][j]=Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
-    }
-  }
-  return dp[m][n];
-}
-function similarity(target, heard){
-  target=normalize(target); heard=normalize(heard);
-  if(!heard) return 0;
-  const words=heard.split(" ");
-  let candidates=[heard,...words];
-  let best=0;
-  for(const c of candidates){
-    const maxLen=Math.max(target.length,c.length)||1;
-    const sim=1-levenshtein(target,c)/maxLen;
-    if(sim>best) best=sim;
-  }
-  if(words.includes(target)) best=Math.max(best,.98);
-  return Math.max(0, Math.min(1, best));
-}
-function speak(text){
-  if(!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "en-US"; u.rate = .82;
-  window.speechSynthesis.speak(u);
-}
-
-document.querySelectorAll(".tab").forEach(b=>{
-  b.onclick=()=>{
-    tab=b.dataset.tab;
-    document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));
-    document.querySelectorAll(".page").forEach(p=>p.classList.add("hidden"));
-    $(tab).classList.remove("hidden");
-    if(tab==="wrong") renderWrong();
-    if(tab==="phrases") renderPhrases();
-    if(tab==="quiz") newQuiz();
-    if(tab==="pronounce") renderPron();
-  }
-});
-document.querySelectorAll(".mode").forEach(b=>{
-  b.onclick=()=>{
-    quizMode=b.dataset.mode;
-    document.querySelectorAll(".mode").forEach(x=>x.classList.toggle("active",x===b));
-    newQuiz();
-  }
-});
-
-function renderCard(){
-  const w = state.words[cardIndex % state.words.length];
-  $("cardBar").style.width = (((cardIndex%state.words.length)+1)/state.words.length*100)+"%";
-  $("cardEmoji").textContent=w.emoji;
-  $("cardWord").textContent=w.word;
-  $("cardPhonetic").textContent=w.phonetic || "";
-  $("cardZh").textContent=w.meaning;
-  $("cardMemory").textContent=w.memory;
-  $("favCard").textContent = state.fav[w.id] ? "⭐ 已收藏" : "⭐ 收藏";
-}
-$("nextCard").onclick=()=>{cardIndex++;renderCard();}
-$("speakCard").onclick=()=>speak(state.words[cardIndex % state.words.length].word);
-$("favCard").onclick=()=>{const w=state.words[cardIndex%state.words.length]; state.fav[w.id]=!state.fav[w.id]; save(); renderCard();}
-$("knownCard").onclick=()=>{const w=state.words[cardIndex%state.words.length]; state.known[w.id]=true; save(); cardIndex++; renderCard();}
-
-function makeOptions(correct, field){
-  const wrongs = state.words.filter(w=>w.id!==correct.id);
-  let opts = sample(wrongs,3).map(w=>w[field]);
-  opts.push(correct[field]);
-  return shuffle(opts);
-}
-function chooseType(){
-  if(quizMode !== "mixed") return quizMode;
-  return sample(["en2zh","zh2en","listening"],1)[0];
-}
-function newQuiz(){
-  answered=false;
-  $("result").textContent="";
-  $("answerBox").classList.remove("show");
-  const w = sample(state.words,1)[0];
-  const type = chooseType();
-  current = {w,type};
-  const typeName = type==="en2zh" ? "看英文選中文" : type==="zh2en" ? "看中文選英文" : "聽發音選中文";
-  $("quizType").textContent = typeName;
-  $("scorePill").textContent = `${score.ok} / ${score.total}`;
-  $("options").innerHTML="";
-  if(type==="en2zh"){
-    $("questionMain").textContent = w.word;
-    $("questionSub").textContent = "請選出正確中文意思。圖片與記憶提示已隱藏。";
-    makeOptions(w,"meaning").forEach(v=>addOption(v, v===w.meaning));
-  }else if(type==="zh2en"){
-    $("questionMain").textContent = w.meaning;
-    $("questionSub").textContent = "請選出正確英文。不要靠圖片，練主動回想。";
-    makeOptions(w,"word").forEach(v=>addOption(v, v===w.word));
-  }else{
-    $("questionMain").textContent = "🔊";
-    $("questionSub").innerHTML = "先按發音，再選中文。<br><button class='btn small secondary' id='playListen'>播放發音</button>";
-    setTimeout(()=>{ const p=$("playListen"); if(p) p.onclick=()=>speak(w.word); },0);
-    makeOptions(w,"meaning").forEach(v=>addOption(v, v===w.meaning));
-    setTimeout(()=>speak(w.word), 250);
-  }
-}
-function addOption(text, isCorrect){
-  const b=document.createElement("button");
-  b.className="option";
-  b.textContent=text;
-  b.onclick=()=>answer(b,isCorrect);
-  $("options").appendChild(b);
-}
-function answer(btn,isCorrect){
-  if(answered) return;
-  answered=true; score.total++;
-  const {w} = current;
-  document.querySelectorAll(".option").forEach(o=>{
-    const ok = (current.type==="zh2en" ? o.textContent===w.word : o.textContent===w.meaning);
-    if(ok) o.classList.add("correct");
-  });
-  if(!isCorrect){ btn.classList.add("wrong"); state.wrong[w.id]=(state.wrong[w.id]||0)+1; $("result").textContent="❌ 答錯了，再看圖加深印象"; }
-  else { score.ok++; $("result").textContent="✅ 答對了！"; }
-  $("scorePill").textContent = `${score.ok} / ${score.total}`;
-  $("answerEmoji").textContent=w.emoji;
-  $("answerWord").textContent=w.word + " " + (w.phonetic || "");
-  $("answerMeaning").textContent=w.meaning;
-  $("answerMemory").textContent=w.memory;
-  $("answerExample").innerHTML=`<b>例句：</b>${w.example}`;
-  $("answerBox").classList.add("show");
-  save();
-}
+const VERSION="v5.0-3000";
+const LS="english_app_v5_3000";
+let base = Array.isArray(window.WORD_BANK_V5) ? window.WORD_BANK_V5 : [];
+let dialogues = Array.isArray(window.DIALOGUES_V5) ? window.DIALOGUES_V5 : [];
+let state=load();
+let tab="cards", cardIndex=0, quizMode="mixed", current=null, answered=false, score={ok:0,total:0}, speakItem=null, libLimit=40;
+function load(){try{const s=JSON.parse(localStorage.getItem(LS)||"{}");return {custom:s.custom||[],wrong:s.wrong||{},fav:s.fav||{},known:s.known||{}}}catch(e){return {custom:[],wrong:{},fav:{},known:{}}}}
+function save(){localStorage.setItem(LS,JSON.stringify(state))}
+function words(){return [...state.custom,...base]}
+function $(id){return document.getElementById(id)} function shuffle(a){return [...a].sort(()=>Math.random()-.5)} function sample(a,n=1){return shuffle(a).slice(0,n)}
+function cats(){return ["全部",...Array.from(new Set(words().map(w=>w.cat))).sort()]}
+function fillCats(){for(const id of ["cardCat","libCat"]){const sel=$(id); if(!sel)return; const val=sel.value||"全部"; sel.innerHTML=cats().map(c=>`<option ${c===val?'selected':''}>${c}</option>`).join("")}}
+function filtered(qid,cid){const q=($(qid)?.value||"").toLowerCase().trim();const c=$(cid)?.value||"全部";return words().filter(w=>(c==="全部"||w.cat===c)&&(!q||w.word.toLowerCase().includes(q)||w.meaning.includes(q)||w.cat.includes(q)||w.type.includes(q)))}
+function speak(text){if(!("speechSynthesis" in window))return; speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.82;speechSynthesis.speak(u)}
+function setTab(t){tab=t;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.tab===t));document.querySelectorAll(".page").forEach(p=>p.classList.add("hidden"));$(t).classList.remove("hidden");if(t==="wrong")renderWrong(); if(t==="phrases")renderPhrases(); if(t==="quiz")newQuiz(); if(t==="speak")renderSpeak(); if(t==="library")renderLibrary(); if(t==="cards")renderCard();}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+document.querySelectorAll(".mode").forEach(b=>{b.onclick=()=>{quizMode=b.dataset.mode;document.querySelectorAll(".mode").forEach(x=>x.classList.toggle("active",x===b));newQuiz();}});
+function renderCard(){fillCats();const arr=filtered("cardSearch","cardCat"); if(!arr.length)return; cardIndex=cardIndex%arr.length; const w=arr[cardIndex]; $("cardBar").style.width=((cardIndex+1)/arr.length*100)+"%"; $("cardEmoji").textContent=w.emoji; $("cardWord").textContent=w.word; $("cardZh").textContent=w.meaning; $("cardMemory").textContent=w.memory||""; $("cardType").textContent=`${w.cat}｜${w.type||'單字'}｜${arr.length} 筆`; $("favCard").textContent=state.fav[w.id]?"⭐ 已收藏":"⭐ 收藏";}
+$("cardSearch").oninput=()=>{cardIndex=0;renderCard()}; $("cardCat").onchange=()=>{cardIndex=0;renderCard()}; $("nextCard").onclick=()=>{cardIndex++;renderCard()}; $("speakCard").onclick=()=>{const arr=filtered("cardSearch","cardCat"); if(arr.length)speak(arr[cardIndex%arr.length].word)}; $("favCard").onclick=()=>{const arr=filtered("cardSearch","cardCat"); if(!arr.length)return; const w=arr[cardIndex%arr.length]; state.fav[w.id]=!state.fav[w.id]; save(); renderCard()}; $("knownCard").onclick=()=>{const arr=filtered("cardSearch","cardCat"); if(!arr.length)return; const w=arr[cardIndex%arr.length]; state.known[w.id]=true; save(); cardIndex++; renderCard()};
+function chooseType(){return quizMode!=="mixed"?quizMode:sample(["en2zh","zh2en","listening"],1)[0]}
+function makeOptions(correct,field){let pool=words().filter(w=>w.id!==correct.id&&w[field]&&w.cat===correct.cat); if(pool.length<3)pool=words().filter(w=>w.id!==correct.id&&w[field]); return shuffle([...sample(pool,3).map(w=>w[field]),correct[field]])}
+function newQuiz(){answered=false;$("result").textContent="";$("answerBox").classList.remove("show");const pool=words();const w=sample(pool,1)[0];const type=chooseType();current={w,type};$("quizBankSize").textContent=`詞庫 ${pool.length}`;$("scorePill").textContent=`${score.ok} / ${score.total}`;$("options").innerHTML="";const name=type==="en2zh"?"看英文選中文":type==="zh2en"?"看中文選英文":"聽發音選中文";$("quizType").textContent=name;if(type==="en2zh"){ $("questionMain").textContent=w.word; $("questionSub").textContent="請選正確中文。圖片與提示已隱藏。"; makeOptions(w,"meaning").forEach(v=>addOption(v,v===w.meaning));}else if(type==="zh2en"){ $("questionMain").textContent=w.meaning; $("questionSub").textContent="請選正確英文。訓練主動回想。"; makeOptions(w,"word").forEach(v=>addOption(v,v===w.word));}else{ $("questionMain").textContent="🔊"; $("questionSub").innerHTML="先按發音，再選中文。<br><button class='btn small secondary' id='playListen'>播放發音</button>"; setTimeout(()=>{$("playListen").onclick=()=>speak(w.word)},0); makeOptions(w,"meaning").forEach(v=>addOption(v,v===w.meaning)); setTimeout(()=>speak(w.word),250);}}
+function addOption(text,ok){const b=document.createElement("button");b.className="option";b.textContent=text;b.onclick=()=>answer(b,ok);$("options").appendChild(b)}
+function answer(btn,ok){if(answered)return; answered=true; score.total++; const w=current.w; document.querySelectorAll(".option").forEach(o=>{const good=current.type==="zh2en"?o.textContent===w.word:o.textContent===w.meaning;if(good)o.classList.add("correct")}); if(!ok){btn.classList.add("wrong");state.wrong[w.id]=(state.wrong[w.id]||0)+1;$("result").textContent="❌ 答錯了，再看圖加深印象"}else{score.ok++;$("result").textContent="✅ 答對了！"; state.known[w.id]=true} $("scorePill").textContent=`${score.ok} / ${score.total}`; $("answerEmoji").textContent=w.emoji; $("answerWord").textContent=w.word; $("answerMeaning").textContent=w.meaning; $("answerMemory").textContent=w.memory||""; $("answerExample").innerHTML=`<b>例句：</b>${w.example||''}`; $("answerBox").classList.add("show"); save()}
 $("nextQuiz").onclick=newQuiz;
-
-function renderPron(){
-  const w=state.words[pronIndex % state.words.length];
-  $("pronBar").style.width = (((pronIndex%state.words.length)+1)/state.words.length*100)+"%";
-  $("pronEmoji").textContent=w.emoji;
-  $("pronWord").textContent=w.word;
-  $("pronMeaning").textContent=w.meaning;
-  $("pronPhonetic").textContent=w.phonetic || "";
-  $("heardText").textContent="尚未錄音";
-  $("pronScore").textContent="--";
-  $("pronScore").className="scoreCircle";
-  $("pronFeedback").textContent="按開始錄音後，清楚念一次。";
-  if(Recognition){
-    $("speechSupport").textContent="✅ 你的瀏覽器支援語音辨識。第一次使用會跳出麥克風權限。";
-  }else{
-    $("speechSupport").textContent="⚠️ 這個瀏覽器不支援語音辨識。請用 Chrome / Safari 開 GitHub Pages 網址，不要用檔案預覽。";
-  }
-}
-$("speakPron").onclick=()=>speak(state.words[pronIndex % state.words.length].word);
-$("nextPron").onclick=()=>{pronIndex++; renderPron();}
-$("startPron").onclick=()=>{
-  const w=state.words[pronIndex % state.words.length];
-  if(!Recognition){ $("pronFeedback").textContent="這個瀏覽器沒有 SpeechRecognition，無法判斷發音。"; return; }
-  try{
-    if(recognizer) recognizer.abort();
-    recognizer = new Recognition();
-    recognizer.lang = "en-US";
-    recognizer.continuous = false;
-    recognizer.interimResults = false;
-    recognizer.maxAlternatives = 5;
-    $("heardText").textContent="正在聽...";
-    $("pronFeedback").textContent="請念出：" + w.word;
-    recognizer.onresult = (event)=>{
-      const alternatives = [];
-      const res = event.results[0];
-      for(let i=0;i<res.length;i++){ alternatives.push(res[i].transcript); }
-      const best = alternatives.map(t=>({t, s: similarity(w.word,t)})).sort((a,b)=>b.s-a.s)[0] || {t:"",s:0};
-      const pct = Math.round(best.s*100);
-      $("heardText").textContent = best.t || "沒有辨識到";
-      $("pronScore").textContent = pct;
-      $("pronScore").className="scoreCircle";
-      if(pct>=88){
-        $("pronScore").classList.add("levelGood");
-        $("pronFeedback").textContent="✅ 很好！瀏覽器聽起來像「"+w.word+"」。";
-        state.pron[w.id] = Math.max(state.pron[w.id]||0, pct);
-      }else if(pct>=65){
-        $("pronScore").classList.add("levelOk");
-        $("pronFeedback").textContent="🟡 接近了。再聽一次標準音，注意母音和尾音。";
-        state.pron[w.id] = Math.max(state.pron[w.id]||0, pct);
-      }else{
-        $("pronScore").classList.add("levelBad");
-        $("pronFeedback").textContent="❌ 差比較多。先放慢速度，拆音節念，再試一次。";
-        state.pron[w.id] = Math.max(state.pron[w.id]||0, pct);
-      }
-      save();
-    };
-    recognizer.onerror = (e)=>{
-      let msg = "辨識失敗：" + (e.error || "unknown");
-      if(e.error==="not-allowed") msg="麥克風權限被拒絕。請到 Safari / Chrome 設定允許麥克風。";
-      if(e.error==="no-speech") msg="沒有聽到聲音。請靠近手機再試一次。";
-      $("heardText").textContent="沒有結果";
-      $("pronFeedback").textContent=msg;
-    };
-    recognizer.onend = ()=>{};
-    recognizer.start();
-  }catch(err){
-    $("pronFeedback").textContent="無法啟動錄音，請重新整理後再試。";
-  }
-};
-
-function renderWrong(){
-  const ids=Object.keys(state.wrong).filter(id=>state.wrong[id]>0);
-  const box=$("wrongList"); box.innerHTML="";
-  if(ids.length===0){ box.innerHTML="<div class='notice'>目前沒有錯題。去測驗幾題看看。</div>"; return; }
-  ids.sort((a,b)=>state.wrong[b]-state.wrong[a]).forEach(id=>{
-    const w=state.words.find(x=>x.id===id); if(!w) return;
-    const div=document.createElement("div");
-    div.className="wordItem";
-    div.innerHTML=`<div style="font-size:34px">${w.emoji}</div><div><div class="e">${w.word}</div><div class="m">${w.meaning}｜錯 ${state.wrong[id]} 次</div></div><button class="btn small secondary">🔊</button>`;
-    div.querySelector("button").onclick=()=>speak(w.word);
-    box.appendChild(div);
-  });
-}
-$("clearWrong").onclick=()=>{state.wrong={}; save(); renderWrong();}
-
-function renderPhrases(){
-  const box=$("phraseList"); box.innerHTML="";
-  phrases.forEach(p=>{
-    const div=document.createElement("div");
-    div.className="wordItem";
-    div.innerHTML=`<div style="font-size:32px">💬</div><div><div class="e" style="font-size:19px">${p[0]}</div><div class="m">${p[1]}｜${p[2]}</div></div><button class="btn small secondary">🔊</button>`;
-    div.querySelector("button").onclick=()=>speak(p[0]);
-    box.appendChild(div);
-  });
-}
-$("addWord").onclick=()=>{
-  const word=$("newWord").value.trim(), meaning=$("newMeaning").value.trim();
-  if(!word || !meaning){ alert("英文和中文意思要填。"); return; }
-  const w={id:"custom-"+Date.now(),word,meaning,emoji:$("newEmoji").value.trim()||"🧠",memory:$("newMemory").value.trim()||"自己新增的單字。",example:$("newExample").value.trim()||`I use the word ${word}.`,phonetic:"",cat:"自訂"};
-  state.words.unshift(w); save();
-  ["newWord","newMeaning","newEmoji","newMemory","newExample"].forEach(id=>$(id).value="");
-  alert("已加入單字。");
-  cardIndex=0; pronIndex=0; renderCard(); renderPron();
-};
-
-if("serviceWorker" in navigator){
-  window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));
-}
-renderCard();
-renderPron();
+function renderSpeak(){const Rec=window.SpeechRecognition||window.webkitSpeechRecognition;$("speechSupport").textContent=Rec?"你的瀏覽器支援語音辨識。第一次使用請允許麥克風。":"這個瀏覽器可能不支援語音辨識。iPhone 建議用 Safari，並允許麥克風。"; if(!speakItem)speakItem=sample(words(),1)[0]; $("speakEmoji").textContent=speakItem.emoji; $("speakWord").textContent=speakItem.word; $("speakMeaning").textContent=speakItem.meaning;}
+$("playSpeak").onclick=()=>speak(speakItem.word); $("nextSpeak").onclick=()=>{speakItem=sample(words(),1)[0];$("heard").textContent="尚未錄音";$("pronScore").textContent="";renderSpeak()};
+function norm(s){return (s||"").toLowerCase().replace(/[^a-z ]/g," ").replace(/\s+/g," ").trim()} function lev(a,b){const m=a.length,n=b.length,dp=Array.from({length:m+1},()=>Array(n+1).fill(0));for(let i=0;i<=m;i++)dp[i][0]=i;for(let j=0;j<=n;j++)dp[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)dp[i][j]=Math.min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return dp[m][n]}
+$("recordBtn").onclick=()=>{const Rec=window.SpeechRecognition||window.webkitSpeechRecognition;if(!Rec){alert("這個瀏覽器不支援語音辨識");return} const r=new Rec();r.lang="en-US";r.interimResults=false;r.maxAlternatives=3;$("heard").textContent="正在聽...";$("pronScore").textContent="";r.onresult=e=>{let heard=e.results[0][0].transcript;$("heard").textContent=heard;const target=norm(speakItem.word), got=norm(heard);let sc=0;if(got.includes(target)||target.includes(got))sc=95;else{const d=lev(target,got);sc=Math.max(0,Math.round((1-d/Math.max(target.length,got.length,1))*100));}$("pronScore").textContent=sc>=88?`✅ ${sc} 分：很像！`:sc>=65?`🟡 ${sc} 分：接近，再練一次`: `🔴 ${sc} 分：需要重練`;};r.onerror=e=>{$("heard").textContent="辨識失敗："+e.error};r.start();};
+function renderWrong(){const ids=Object.keys(state.wrong).filter(id=>state.wrong[id]>0);const box=$("wrongList");box.innerHTML="";if(!ids.length){box.innerHTML="<div class='notice'>目前沒有錯題。</div>";return} ids.sort((a,b)=>state.wrong[b]-state.wrong[a]).forEach(id=>{const w=words().find(x=>x.id===id); if(!w)return; const d=document.createElement("div");d.className="wordItem";d.innerHTML=`<div style="font-size:34px">${w.emoji}</div><div><div class="e">${w.word}</div><div class="m">${w.meaning}｜錯 ${state.wrong[id]} 次｜${w.cat}</div></div><button class="btn small secondary">🔊</button>`;d.querySelector("button").onclick=()=>speak(w.word);box.appendChild(d)})}
+$("clearWrong").onclick=()=>{state.wrong={};save();renderWrong()};
+function renderPhrases(){const box=$("phraseList");box.innerHTML="";dialogues.slice(0,120).forEach(d=>{const div=document.createElement("div");div.className="wordItem";div.style.gridTemplateColumns="auto 1fr";div.innerHTML=`<div style="font-size:34px">${d.emoji}</div><div><div class="e">${d.title}</div><div class="dialogue"><b>English</b>\n${d.en}\n\n<b>中文</b>\n${d.zh}</div><button class="btn small secondary" style="margin-top:10px">🔊 跟讀英文</button></div>`;div.querySelector("button").onclick=()=>speak(d.en.replace(/A:|B:/g,""));box.appendChild(div)})}
+function renderLibrary(){fillCats();const arr=filtered("libSearch","libCat");$("totalWords").textContent=words().length;$("knownCount").textContent=Object.keys(state.known).length;$("favCount").textContent=Object.values(state.fav).filter(Boolean).length;$("wrongCount").textContent=Object.keys(state.wrong).filter(k=>state.wrong[k]>0).length;const box=$("libList");box.innerHTML="";arr.slice(0,libLimit).forEach(w=>{const d=document.createElement("div");d.className="wordItem";d.innerHTML=`<div style="font-size:31px">${w.emoji}</div><div><div class="e">${w.word}</div><div class="m">${w.meaning}｜${w.cat}｜${w.type}</div></div><button class="btn small secondary">🔊</button>`;d.querySelector("button").onclick=()=>speak(w.word);box.appendChild(d)});$("moreLib").textContent=libLimit<arr.length?`顯示更多（${libLimit}/${arr.length}）`:"已全部顯示"}
+$("libSearch").oninput=()=>{libLimit=40;renderLibrary()}; $("libCat").onchange=()=>{libLimit=40;renderLibrary()}; $("moreLib").onclick=()=>{libLimit+=40;renderLibrary()};
+$("addWord").onclick=()=>{const word=$("newWord").value.trim(),meaning=$("newMeaning").value.trim();if(!word||!meaning){alert("英文和中文意思要填。");return}const w={id:"custom-"+Date.now(),word,meaning,emoji:$("newEmoji").value.trim()||"🧠",cat:$("newCat").value.trim()||"自訂",memory:$("newMemory").value.trim()||`自己新增：${word} = ${meaning}`,example:$("newExample").value.trim()||`I use ${word}.`,type:"自訂"};state.custom.unshift(w);save();["newWord","newMeaning","newEmoji","newCat","newMemory","newExample"].forEach(id=>$(id).value="");fillCats();alert("已加入單字。")};
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js?v=5").catch(()=>{}))}
+fillCats();renderCard();
 </script>
 </body>
 </html>
