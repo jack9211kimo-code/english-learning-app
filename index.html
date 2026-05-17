@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="英文生活單字" />
+  <title>英文生活單字 App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">English Daily Conversation</p>
+        <h1>英文生活單字</h1>
+        <p class="hero-text">用圖片記憶、例句、發音、測驗與錯題複習，練日常對話最常用的英文。</p>
+      </div>
+      <div class="hero-card" aria-label="今日學習進度">
+        <span class="hero-emoji">🔥</span>
+        <div>
+          <strong id="todayCount">0</strong>
+          <small>今日已練習</small>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="主要功能">
+      <button class="tab active" data-view="cards">單字卡</button>
+      <button class="tab" data-view="quiz">測驗</button>
+      <button class="tab" data-view="wrong">錯題</button>
+      <button class="tab" data-view="phrases">句型</button>
+      <button class="tab" data-view="custom">新增</button>
+    </nav>
+
+    <main>
+      <section class="filters" aria-label="篩選單字">
+        <label>
+          搜尋
+          <input id="searchInput" type="search" placeholder="例如：coffee、謝謝、問路" autocomplete="off" />
+        </label>
+        <label>
+          情境
+          <select id="categorySelect"></select>
+        </label>
+        <label>
+          難度
+          <select id="levelSelect">
+            <option>全部</option>
+            <option>A1</option>
+            <option>A2</option>
+            <option>B1</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="viewCards" class="view active-view">
+        <article class="word-card" id="wordCard">
+          <div class="card-topline">
+            <span class="pill" id="wordCategory">生活</span>
+            <span class="pill muted" id="wordLevel">A1</span>
+          </div>
+          <button class="favorite" id="favoriteBtn" aria-label="收藏單字">☆</button>
+          <div class="picture" id="wordPicture">☕</div>
+          <h2 id="wordText">coffee</h2>
+          <p class="phonetic" id="wordPhonetic">/ˈkɔːfi/</p>
+          <p class="meaning" id="wordMeaning">咖啡</p>
+          <p class="memory" id="wordMemory">看到 ☕ 就想 coffee。</p>
+          <div class="sentence-box">
+            <p id="wordExample">I would like a coffee, please.</p>
+            <small id="wordExampleZh">我想要一杯咖啡，謝謝。</small>
+          </div>
+          <div class="card-actions">
+            <button class="primary" id="speakWordBtn">🔊 單字</button>
+            <button class="secondary" id="speakSentenceBtn">🔊 例句</button>
+          </div>
+        </article>
+
+        <div class="pager">
+          <button id="prevBtn">上一個</button>
+          <span id="cardCounter">1 / 1</span>
+          <button id="nextBtn">下一個</button>
+        </div>
+
+        <section class="quick-grid" id="wordGrid" aria-label="單字快速選擇"></section>
+      </section>
+
+      <section id="viewQuiz" class="view">
+        <article class="panel">
+          <div class="section-title">
+            <span>🧠</span>
+            <div>
+              <h2>圖片記憶測驗</h2>
+              <p>看圖與英文，選出正確中文意思。</p>
+            </div>
+          </div>
+          <div class="quiz-box">
+            <div class="quiz-picture" id="quizPicture">🍽️</div>
+            <h3 id="quizWord">meal</h3>
+            <p id="quizHint">提示會顯示在這裡</p>
+            <div class="option-list" id="quizOptions"></div>
+            <p class="quizResult" id="quizResult"></p>
+            <button class="primary full" id="nextQuizBtn">下一題</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="viewWrong" class="view">
+        <article class="panel">
+          <div class="section-title">
+            <span>🔁</span>
+            <div>
+              <h2>錯題複習</h2>
+              <p>答錯的單字會自動放在這裡。</p>
+            </div>
+          </div>
+          <div id="wrongList" class="list"></div>
+          <button id="clearWrongBtn" class="danger full">清空錯題</button>
+        </article>
+      </section>
+
+      <section id="viewPhrases" class="view">
+        <article class="panel">
+          <div class="section-title">
+            <span>💬</span>
+            <div>
+              <h2>生活常用句型</h2>
+              <p>日常對話先背這些就很實用。</p>
+            </div>
+          </div>
+          <div id="phraseList" class="phrase-list"></div>
+        </article>
+      </section>
+
+      <section id="viewCustom" class="view">
+        <article class="panel">
+          <div class="section-title">
+            <span>➕</span>
+            <div>
+              <h2>新增自己的單字</h2>
+              <p>可以把你常遇到的單字放進來。</p>
+            </div>
+          </div>
+          <form id="customForm" class="form-grid">
+            <label>英文單字<input required id="customWord" placeholder="例如：receipt" /></label>
+            <label>中文意思<input required id="customMeaning" placeholder="例如：收據" /></label>
+            <label>情境<input id="customCategory" placeholder="例如：購物" /></label>
+            <label>圖像提示<input id="customPicture" placeholder="例如：🧾" maxlength="4" /></label>
+            <label class="wide">英文例句<input id="customExample" placeholder="Can I have a receipt?" /></label>
+            <label class="wide">中文例句<input id="customExampleZh" placeholder="可以給我收據嗎？" /></label>
+            <button class="primary full" type="submit">加入單字</button>
+          </form>
+          <button id="exportBtn" class="secondary full">匯出學習資料</button>
+          <label class="import-button full">
+            匯入學習資料
+            <input type="file" id="importInput" accept="application/json" hidden />
+          </label>
+          <p class="note">資料會存在瀏覽器內。如果換手機或清除瀏覽資料，建議先匯出備份。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>建議：每天 10 個單字 + 5 句生活句型。先求敢說，再求文法完美。</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
