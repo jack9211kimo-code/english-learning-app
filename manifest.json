@@ -1,7 +1,7 @@
 {
-  "name": "英文學習 App v6.1",
-  "short_name": "英文學習",
-  "start_url": "./?v=61",
+  "name": "英文學習 App v7 自然拼讀版",
+  "short_name": "英文學習 v7",
+  "start_url": "./?v=7",
   "display": "standalone",
   "background_color": "#eef6ff",
   "theme_color": "#2563eb",
