@@ -1,13 +1,20 @@
 {
-  "name": "英文學習 App｜生活對話圖片記憶版",
+  "name": "英文學習 App v3 真考試版",
   "short_name": "英文學習",
-  "start_url": "./",
+  "start_url": "./?v=3",
   "display": "standalone",
-  "background_color": "#f6f7fb",
+  "background_color": "#eef5ff",
   "theme_color": "#2563eb",
-  "description": "生活對話常用英文單字、圖片記憶、發音、測驗與錯題複習。",
   "icons": [
-    {"src":"icon-192.svg","sizes":"192x192","type":"image/svg+xml"},
-    {"src":"icon-512.svg","sizes":"512x512","type":"image/svg+xml"}
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
   ]
 }
