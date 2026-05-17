@@ -1,7 +1,7 @@
 {
-  "name": "英文學習 App v7.1 真實詞庫修正版",
-  "short_name": "英文學習 v7.1",
-  "start_url": "./?v=71",
+  "name": "英文學習 App v7.2 乾淨詞庫版",
+  "short_name": "英文學習 v7.2",
+  "start_url": "./?v=72",
   "display": "standalone",
   "background_color": "#eef6ff",
   "theme_color": "#2563eb",
