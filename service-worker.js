@@ -1,4 +1,4 @@
-const CACHE='english-learning-v3-real-quiz';
+const CACHE='english-learning-v4-pronunciation';
 const ASSETS=['./','./index.html','./manifest.json','./icon-192.svg','./icon-512.svg'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
