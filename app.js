@@ -101,6 +101,1485 @@ const phraseBank = [
   { en:"Sorry, I don't understand.", zh:"抱歉，我聽不懂。", tag:"溝通" }
 ];
 
+
+const adultStarterWords = [
+  {
+    "word": "breast",
+    "meaning": "胸部；乳房（較普通）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：breast = 胸部；乳房（較普通）。注意語氣與使用場合。",
+    "example": "Breast is a normal word for this body part.",
+    "exampleZh": "胸部；乳房（較普通）",
+    "options": [
+      "胸部；乳房（較普通）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "boobs",
+    "meaning": "奶子；胸部（口語／粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：boobs = 奶子；胸部（口語／粗俗）。注意語氣與使用場合。",
+    "example": "Boobs is casual and can sound vulgar.",
+    "exampleZh": "奶子；胸部（口語／粗俗）",
+    "options": [
+      "奶子；胸部（口語／粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "nipple",
+    "meaning": "乳頭",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：nipple = 乳頭。注意語氣與使用場合。",
+    "example": "Nipple is a body-part word.",
+    "exampleZh": "乳頭",
+    "options": [
+      "乳頭",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "butt",
+    "meaning": "屁股（口語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：butt = 屁股（口語）。注意語氣與使用場合。",
+    "example": "Butt is a common casual word.",
+    "exampleZh": "屁股（口語）",
+    "options": [
+      "屁股（口語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "ass",
+    "meaning": "屁股；也可當罵人字（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：ass = 屁股；也可當罵人字（粗俗）。注意語氣與使用場合。",
+    "example": "Ass is vulgar, so do not use it in formal situations.",
+    "exampleZh": "屁股；也可當罵人字（粗俗）",
+    "options": [
+      "屁股；也可當罵人字（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "penis",
+    "meaning": "陰莖（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：penis = 陰莖（正式）。注意語氣與使用場合。",
+    "example": "Penis is the formal word.",
+    "exampleZh": "陰莖（正式）",
+    "options": [
+      "陰莖（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "dick",
+    "meaning": "雞巴；陰莖（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：dick = 雞巴；陰莖（粗俗）。注意語氣與使用場合。",
+    "example": "Dick is very casual and vulgar.",
+    "exampleZh": "雞巴；陰莖（粗俗）",
+    "options": [
+      "雞巴；陰莖（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "cock",
+    "meaning": "雞巴；陰莖（成人片常見粗俗詞）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：cock = 雞巴；陰莖（成人片常見粗俗詞）。注意語氣與使用場合。",
+    "example": "Cock is a vulgar porn-related word.",
+    "exampleZh": "雞巴；陰莖（成人片常見粗俗詞）",
+    "options": [
+      "雞巴；陰莖（成人片常見粗俗詞）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "vagina",
+    "meaning": "陰道；女性生殖器（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：vagina = 陰道；女性生殖器（正式）。注意語氣與使用場合。",
+    "example": "Vagina is the formal word.",
+    "exampleZh": "陰道；女性生殖器（正式）",
+    "options": [
+      "陰道；女性生殖器（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "pussy",
+    "meaning": "小穴；女性陰部（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：pussy = 小穴；女性陰部（粗俗）。注意語氣與使用場合。",
+    "example": "Pussy is vulgar and common in porn contexts.",
+    "exampleZh": "小穴；女性陰部（粗俗）",
+    "options": [
+      "小穴；女性陰部（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "clitoris",
+    "meaning": "陰蒂（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：clitoris = 陰蒂（正式）。注意語氣與使用場合。",
+    "example": "Clitoris is an anatomical word.",
+    "exampleZh": "陰蒂（正式）",
+    "options": [
+      "陰蒂（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "balls",
+    "meaning": "睪丸；蛋蛋（口語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：balls = 睪丸；蛋蛋（口語）。注意語氣與使用場合。",
+    "example": "Balls is a casual word for testicles.",
+    "exampleZh": "睪丸；蛋蛋（口語）",
+    "options": [
+      "睪丸；蛋蛋（口語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "testicles",
+    "meaning": "睪丸（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：testicles = 睪丸（正式）。注意語氣與使用場合。",
+    "example": "Testicles is the formal word.",
+    "exampleZh": "睪丸（正式）",
+    "options": [
+      "睪丸（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "anus",
+    "meaning": "肛門（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：anus = 肛門（正式）。注意語氣與使用場合。",
+    "example": "Anus is the formal word.",
+    "exampleZh": "肛門（正式）",
+    "options": [
+      "肛門（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "genitals",
+    "meaning": "生殖器；私處（正式總稱）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：genitals = 生殖器；私處（正式總稱）。注意語氣與使用場合。",
+    "example": "Genitals means private sexual body parts.",
+    "exampleZh": "生殖器；私處（正式總稱）",
+    "options": [
+      "生殖器；私處（正式總稱）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "make out",
+    "meaning": "激吻；親熱",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💋",
+    "memory": "18+ 詞彙：make out = 激吻；親熱。注意語氣與使用場合。",
+    "example": "Make out means to kiss passionately.",
+    "exampleZh": "激吻；親熱",
+    "options": [
+      "激吻；親熱",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "have sex",
+    "meaning": "發生性關係；做愛",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：have sex = 發生性關係；做愛。注意語氣與使用場合。",
+    "example": "Have sex is a general expression.",
+    "exampleZh": "發生性關係；做愛",
+    "options": [
+      "發生性關係；做愛",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "fuck",
+    "meaning": "幹；性交；粗俗說法",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：fuck = 幹；性交；粗俗說法。注意語氣與使用場合。",
+    "example": "Fuck is very vulgar and should be used carefully.",
+    "exampleZh": "幹；性交；粗俗說法",
+    "options": [
+      "幹；性交；粗俗說法",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "oral sex",
+    "meaning": "口交（正式／中性）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：oral sex = 口交（正式／中性）。注意語氣與使用場合。",
+    "example": "Oral sex is the neutral term.",
+    "exampleZh": "口交（正式／中性）",
+    "options": [
+      "口交（正式／中性）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "blowjob",
+    "meaning": "口交，通常指幫男性口交（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：blowjob = 口交，通常指幫男性口交（粗俗）。注意語氣與使用場合。",
+    "example": "Blowjob is a common adult slang word.",
+    "exampleZh": "口交，通常指幫男性口交（粗俗）",
+    "options": [
+      "口交，通常指幫男性口交（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "handjob",
+    "meaning": "手交，通常指用手幫男性（成人俚語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：handjob = 手交，通常指用手幫男性（成人俚語）。注意語氣與使用場合。",
+    "example": "Handjob is adult slang.",
+    "exampleZh": "手交，通常指用手幫男性（成人俚語）",
+    "options": [
+      "手交，通常指用手幫男性（成人俚語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "fingering",
+    "meaning": "指交；用手指刺激（成人俚語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：fingering = 指交；用手指刺激（成人俚語）。注意語氣與使用場合。",
+    "example": "Fingering is adult slang.",
+    "exampleZh": "指交；用手指刺激（成人俚語）",
+    "options": [
+      "指交；用手指刺激（成人俚語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "masturbate",
+    "meaning": "自慰（較正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：masturbate = 自慰（較正式）。注意語氣與使用場合。",
+    "example": "Masturbate is the formal verb.",
+    "exampleZh": "自慰（較正式）",
+    "options": [
+      "自慰（較正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "jerk off",
+    "meaning": "打手槍；男性自慰（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：jerk off = 打手槍；男性自慰（粗俗）。注意語氣與使用場合。",
+    "example": "Jerk off is casual and vulgar.",
+    "exampleZh": "打手槍；男性自慰（粗俗）",
+    "options": [
+      "打手槍；男性自慰（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "orgasm",
+    "meaning": "高潮（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：orgasm = 高潮（正式）。注意語氣與使用場合。",
+    "example": "Orgasm is the formal word.",
+    "exampleZh": "高潮（正式）",
+    "options": [
+      "高潮（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "cum",
+    "meaning": "射精；精液；高潮（粗俗成人用語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：cum = 射精；精液；高潮（粗俗成人用語）。注意語氣與使用場合。",
+    "example": "Cum is vulgar adult slang.",
+    "exampleZh": "射精；精液；高潮（粗俗成人用語）",
+    "options": [
+      "射精；精液；高潮（粗俗成人用語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "ejaculate",
+    "meaning": "射精（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：ejaculate = 射精（正式）。注意語氣與使用場合。",
+    "example": "Ejaculate is the formal verb.",
+    "exampleZh": "射精（正式）",
+    "options": [
+      "射精（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "thrust",
+    "meaning": "抽插；推進動作（成人語境常見）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：thrust = 抽插；推進動作（成人語境常見）。注意語氣與使用場合。",
+    "example": "Thrust can mean a pushing movement.",
+    "exampleZh": "抽插；推進動作（成人語境常見）",
+    "options": [
+      "抽插；推進動作（成人語境常見）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "ride",
+    "meaning": "騎乘；女上位語境常見",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：ride = 騎乘；女上位語境常見。注意語氣與使用場合。",
+    "example": "Ride can be used as adult slang.",
+    "exampleZh": "騎乘；女上位語境常見",
+    "options": [
+      "騎乘；女上位語境常見",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "anal sex",
+    "meaning": "肛交（成人詞彙）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：anal sex = 肛交（成人詞彙）。注意語氣與使用場合。",
+    "example": "Anal sex is an adult term.",
+    "exampleZh": "肛交（成人詞彙）",
+    "options": [
+      "肛交（成人詞彙）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "porn",
+    "meaning": "色情片；A片",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：porn = 色情片；A片。注意語氣與使用場合。",
+    "example": "Porn means sexually explicit video or media.",
+    "exampleZh": "色情片；A片",
+    "options": [
+      "色情片；A片",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "adult video",
+    "meaning": "成人影片；A片",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：adult video = 成人影片；A片。注意語氣與使用場合。",
+    "example": "Adult video is a softer way to say porn video.",
+    "exampleZh": "成人影片；A片",
+    "options": [
+      "成人影片；A片",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "nude",
+    "meaning": "裸體的；裸照",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：nude = 裸體的；裸照。注意語氣與使用場合。",
+    "example": "Nude means without clothes.",
+    "exampleZh": "裸體的；裸照",
+    "options": [
+      "裸體的；裸照",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "naked",
+    "meaning": "全裸的；沒穿衣服的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：naked = 全裸的；沒穿衣服的。注意語氣與使用場合。",
+    "example": "Naked is a common word.",
+    "exampleZh": "全裸的；沒穿衣服的",
+    "options": [
+      "全裸的；沒穿衣服的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "explicit",
+    "meaning": "露骨的；明確色情的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "⚠️",
+    "memory": "18+ 詞彙：explicit = 露骨的；明確色情的。注意語氣與使用場合。",
+    "example": "Explicit content is not suitable for all audiences.",
+    "exampleZh": "露骨的；明確色情的",
+    "options": [
+      "露骨的；明確色情的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "hardcore",
+    "meaning": "重口味色情；硬色情",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：hardcore = 重口味色情；硬色情。注意語氣與使用場合。",
+    "example": "Hardcore is stronger than softcore.",
+    "exampleZh": "重口味色情；硬色情",
+    "options": [
+      "重口味色情；硬色情",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "softcore",
+    "meaning": "較輕度色情；軟色情",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：softcore = 較輕度色情；軟色情。注意語氣與使用場合。",
+    "example": "Softcore is less explicit than hardcore.",
+    "exampleZh": "較輕度色情；軟色情",
+    "options": [
+      "較輕度色情；軟色情",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "amateur",
+    "meaning": "素人；非專業拍攝",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：amateur = 素人；非專業拍攝。注意語氣與使用場合。",
+    "example": "Amateur means not professional.",
+    "exampleZh": "素人；非專業拍攝",
+    "options": [
+      "素人；非專業拍攝",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "solo",
+    "meaning": "單人；單人自慰類型",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：solo = 單人；單人自慰類型。注意語氣與使用場合。",
+    "example": "Solo means one person only.",
+    "exampleZh": "單人；單人自慰類型",
+    "options": [
+      "單人；單人自慰類型",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "POV",
+    "meaning": "第一人稱視角",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎬",
+    "memory": "18+ 詞彙：POV = 第一人稱視角。注意語氣與使用場合。",
+    "example": "POV means point of view.",
+    "exampleZh": "第一人稱視角",
+    "options": [
+      "第一人稱視角",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "cumshot",
+    "meaning": "射精鏡頭；成人片詞彙（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：cumshot = 射精鏡頭；成人片詞彙（粗俗）。注意語氣與使用場合。",
+    "example": "Cumshot is a porn-related slang word.",
+    "exampleZh": "射精鏡頭；成人片詞彙（粗俗）",
+    "options": [
+      "射精鏡頭；成人片詞彙（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "creampie",
+    "meaning": "內射類型；成人片詞彙（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：creampie = 內射類型；成人片詞彙（粗俗）。注意語氣與使用場合。",
+    "example": "Creampie is a vulgar porn category word.",
+    "exampleZh": "內射類型；成人片詞彙（粗俗）",
+    "options": [
+      "內射類型；成人片詞彙（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "facial",
+    "meaning": "射臉類型；成人片詞彙（粗俗）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：facial = 射臉類型；成人片詞彙（粗俗）。注意語氣與使用場合。",
+    "example": "Facial can be a vulgar porn term.",
+    "exampleZh": "射臉類型；成人片詞彙（粗俗）",
+    "options": [
+      "射臉類型；成人片詞彙（粗俗）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "squirting",
+    "meaning": "潮吹；成人片詞彙",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：squirting = 潮吹；成人片詞彙。注意語氣與使用場合。",
+    "example": "Squirting is an adult-content term.",
+    "exampleZh": "潮吹；成人片詞彙",
+    "options": [
+      "潮吹；成人片詞彙",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "dirty talk",
+    "meaning": "情色挑逗話；性愛時的挑逗語",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💬",
+    "memory": "18+ 詞彙：dirty talk = 情色挑逗話；性愛時的挑逗語。注意語氣與使用場合。",
+    "example": "Dirty talk means sexual teasing words.",
+    "exampleZh": "情色挑逗話；性愛時的挑逗語",
+    "options": [
+      "情色挑逗話；性愛時的挑逗語",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "horny",
+    "meaning": "性慾高漲的；想做愛的（粗俗口語）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔥",
+    "memory": "18+ 詞彙：horny = 性慾高漲的；想做愛的（粗俗口語）。注意語氣與使用場合。",
+    "example": "Horny is casual adult slang.",
+    "exampleZh": "性慾高漲的；想做愛的（粗俗口語）",
+    "options": [
+      "性慾高漲的；想做愛的（粗俗口語）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "sexy",
+    "meaning": "性感的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔥",
+    "memory": "18+ 詞彙：sexy = 性感的。注意語氣與使用場合。",
+    "example": "Sexy means sexually attractive.",
+    "exampleZh": "性感的",
+    "options": [
+      "性感的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "hot",
+    "meaning": "性感的；很辣的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔥",
+    "memory": "18+ 詞彙：hot = 性感的；很辣的。注意語氣與使用場合。",
+    "example": "Hot can mean very attractive.",
+    "exampleZh": "性感的；很辣的",
+    "options": [
+      "性感的；很辣的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "turn on",
+    "meaning": "挑起性慾；讓人興奮",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔥",
+    "memory": "18+ 詞彙：turn on = 挑起性慾；讓人興奮。注意語氣與使用場合。",
+    "example": "That outfit turns me on.",
+    "exampleZh": "挑起性慾；讓人興奮",
+    "options": [
+      "挑起性慾；讓人興奮",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "wet",
+    "meaning": "濕了；成人語境指性興奮",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💧",
+    "memory": "18+ 詞彙：wet = 濕了；成人語境指性興奮。注意語氣與使用場合。",
+    "example": "Wet can have an adult meaning in sexual contexts.",
+    "exampleZh": "濕了；成人語境指性興奮",
+    "options": [
+      "濕了；成人語境指性興奮",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "hard",
+    "meaning": "硬了；成人語境指勃起",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：hard = 硬了；成人語境指勃起。注意語氣與使用場合。",
+    "example": "Hard can have an adult meaning.",
+    "exampleZh": "硬了；成人語境指勃起",
+    "options": [
+      "硬了；成人語境指勃起",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "moan",
+    "meaning": "呻吟",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💬",
+    "memory": "18+ 詞彙：moan = 呻吟。注意語氣與使用場合。",
+    "example": "Moan means to make a low sound.",
+    "exampleZh": "呻吟",
+    "options": [
+      "呻吟",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "tease",
+    "meaning": "挑逗；逗弄",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💬",
+    "memory": "18+ 詞彙：tease = 挑逗；逗弄。注意語氣與使用場合。",
+    "example": "Tease can mean to sexually provoke someone.",
+    "exampleZh": "挑逗；逗弄",
+    "options": [
+      "挑逗；逗弄",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "seduce",
+    "meaning": "誘惑；勾引",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "💬",
+    "memory": "18+ 詞彙：seduce = 誘惑；勾引。注意語氣與使用場合。",
+    "example": "Seduce means to attract someone sexually.",
+    "exampleZh": "誘惑；勾引",
+    "options": [
+      "誘惑；勾引",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "climax",
+    "meaning": "高潮；劇情高潮",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：climax = 高潮；劇情高潮。注意語氣與使用場合。",
+    "example": "Climax can mean orgasm or the high point of a story.",
+    "exampleZh": "高潮；劇情高潮",
+    "options": [
+      "高潮；劇情高潮",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "fetish",
+    "meaning": "性癖；特殊癖好",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：fetish = 性癖；特殊癖好。注意語氣與使用場合。",
+    "example": "Fetish means a strong sexual interest in something.",
+    "exampleZh": "性癖；特殊癖好",
+    "options": [
+      "性癖；特殊癖好",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "kink",
+    "meaning": "特殊性癖；非傳統偏好",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：kink = 特殊性癖；非傳統偏好。注意語氣與使用場合。",
+    "example": "Kink is a casual word for unusual sexual preference.",
+    "exampleZh": "特殊性癖；非傳統偏好",
+    "options": [
+      "特殊性癖；非傳統偏好",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "fantasy",
+    "meaning": "性幻想；幻想",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：fantasy = 性幻想；幻想。注意語氣與使用場合。",
+    "example": "Fantasy means something imagined.",
+    "exampleZh": "性幻想；幻想",
+    "options": [
+      "性幻想；幻想",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "roleplay",
+    "meaning": "角色扮演",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：roleplay = 角色扮演。注意語氣與使用場合。",
+    "example": "Roleplay means acting as a character or situation.",
+    "exampleZh": "角色扮演",
+    "options": [
+      "角色扮演",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "cosplay",
+    "meaning": "角色扮演服裝；Cosplay",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：cosplay = 角色扮演服裝；Cosplay。注意語氣與使用場合。",
+    "example": "Cosplay means dressing as a character.",
+    "exampleZh": "角色扮演服裝；Cosplay",
+    "options": [
+      "角色扮演服裝；Cosplay",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "BDSM",
+    "meaning": "BDSM；成人性癖總稱",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：BDSM = BDSM；成人性癖總稱。注意語氣與使用場合。",
+    "example": "BDSM is an adult preference term.",
+    "exampleZh": "BDSM；成人性癖總稱",
+    "options": [
+      "BDSM；成人性癖總稱",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "dominant",
+    "meaning": "支配方；主導方",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：dominant = 支配方；主導方。注意語氣與使用場合。",
+    "example": "Dominant means leading or controlling.",
+    "exampleZh": "支配方；主導方",
+    "options": [
+      "支配方；主導方",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "submissive",
+    "meaning": "臣服方；被支配方",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：submissive = 臣服方；被支配方。注意語氣與使用場合。",
+    "example": "Submissive means yielding to another person.",
+    "exampleZh": "臣服方；被支配方",
+    "options": [
+      "臣服方；被支配方",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "bondage",
+    "meaning": "綑綁玩法；束縛",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：bondage = 綑綁玩法；束縛。注意語氣與使用場合。",
+    "example": "Bondage is an adult kink term.",
+    "exampleZh": "綑綁玩法；束縛",
+    "options": [
+      "綑綁玩法；束縛",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "spanking",
+    "meaning": "打屁股；成人性癖語境常見",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🎭",
+    "memory": "18+ 詞彙：spanking = 打屁股；成人性癖語境常見。注意語氣與使用場合。",
+    "example": "Spanking can be an adult kink term.",
+    "exampleZh": "打屁股；成人性癖語境常見",
+    "options": [
+      "打屁股；成人性癖語境常見",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "vanilla",
+    "meaning": "普通型；沒有特殊性癖的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🍦",
+    "memory": "18+ 詞彙：vanilla = 普通型；沒有特殊性癖的。注意語氣與使用場合。",
+    "example": "Vanilla means conventional or not kinky.",
+    "exampleZh": "普通型；沒有特殊性癖的",
+    "options": [
+      "普通型；沒有特殊性癖的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "sex toy",
+    "meaning": "情趣用品",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🔞",
+    "memory": "18+ 詞彙：sex toy = 情趣用品。注意語氣與使用場合。",
+    "example": "Sex toy means an adult toy.",
+    "exampleZh": "情趣用品",
+    "options": [
+      "情趣用品",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "consent",
+    "meaning": "同意；性同意",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "✅",
+    "memory": "18+ 詞彙：consent = 同意；性同意。注意語氣與使用場合。",
+    "example": "Consent must be clear and voluntary.",
+    "exampleZh": "同意；性同意",
+    "options": [
+      "同意；性同意",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "boundary",
+    "meaning": "界線；底線",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "✅",
+    "memory": "18+ 詞彙：boundary = 界線；底線。注意語氣與使用場合。",
+    "example": "A boundary is a limit you do not want crossed.",
+    "exampleZh": "界線；底線",
+    "options": [
+      "界線；底線",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "safe word",
+    "meaning": "安全詞；喊了就要停止的詞",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "✅",
+    "memory": "18+ 詞彙：safe word = 安全詞；喊了就要停止的詞。注意語氣與使用場合。",
+    "example": "A safe word means stop immediately.",
+    "exampleZh": "安全詞；喊了就要停止的詞",
+    "options": [
+      "安全詞；喊了就要停止的詞",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "condom",
+    "meaning": "保險套",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🛡️",
+    "memory": "18+ 詞彙：condom = 保險套。注意語氣與使用場合。",
+    "example": "Use a condom is a common safety sentence.",
+    "exampleZh": "保險套",
+    "options": [
+      "保險套",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "protection",
+    "meaning": "保護措施；保險套語境常見",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🛡️",
+    "memory": "18+ 詞彙：protection = 保護措施；保險套語境常見。注意語氣與使用場合。",
+    "example": "Protection often means condoms in sexual contexts.",
+    "exampleZh": "保護措施；保險套語境常見",
+    "options": [
+      "保護措施；保險套語境常見",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "birth control",
+    "meaning": "避孕；避孕措施",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🛡️",
+    "memory": "18+ 詞彙：birth control = 避孕；避孕措施。注意語氣與使用場合。",
+    "example": "Birth control means contraception.",
+    "exampleZh": "避孕；避孕措施",
+    "options": [
+      "避孕；避孕措施",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "contraception",
+    "meaning": "避孕（正式）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🛡️",
+    "memory": "18+ 詞彙：contraception = 避孕（正式）。注意語氣與使用場合。",
+    "example": "Contraception is the formal word.",
+    "exampleZh": "避孕（正式）",
+    "options": [
+      "避孕（正式）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "STI",
+    "meaning": "性傳染病（較新常用縮寫）",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🏥",
+    "memory": "18+ 詞彙：STI = 性傳染病（較新常用縮寫）。注意語氣與使用場合。",
+    "example": "STI means sexually transmitted infection.",
+    "exampleZh": "性傳染病（較新常用縮寫）",
+    "options": [
+      "性傳染病（較新常用縮寫）",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "STD",
+    "meaning": "性病；性傳染病",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🏥",
+    "memory": "18+ 詞彙：STD = 性病；性傳染病。注意語氣與使用場合。",
+    "example": "STD means sexually transmitted disease.",
+    "exampleZh": "性病；性傳染病",
+    "options": [
+      "性病；性傳染病",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "get tested",
+    "meaning": "做性病檢查",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🏥",
+    "memory": "18+ 詞彙：get tested = 做性病檢查。注意語氣與使用場合。",
+    "example": "Get tested means to take a medical test.",
+    "exampleZh": "做性病檢查",
+    "options": [
+      "做性病檢查",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "comfortable",
+    "meaning": "舒服的；能接受的",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "✅",
+    "memory": "18+ 詞彙：comfortable = 舒服的；能接受的。注意語氣與使用場合。",
+    "example": "Are you comfortable with this?",
+    "exampleZh": "舒服的；能接受的",
+    "options": [
+      "舒服的；能接受的",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "stop",
+    "meaning": "停止；停下來",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "🛑",
+    "memory": "18+ 詞彙：stop = 停止；停下來。注意語氣與使用場合。",
+    "example": "Stop means stop immediately.",
+    "exampleZh": "停止；停下來",
+    "options": [
+      "停止；停下來",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  },
+  {
+    "word": "slow down",
+    "meaning": "慢一點",
+    "phonetic": "",
+    "level": "18+",
+    "category": "18+ 成人英文",
+    "picture": "✅",
+    "memory": "18+ 詞彙：slow down = 慢一點。注意語氣與使用場合。",
+    "example": "Slow down means do it more slowly.",
+    "exampleZh": "慢一點",
+    "options": [
+      "慢一點",
+      "色情片詞彙",
+      "同意與安全",
+      "普通日常用語"
+    ]
+  }
+];
+starterWords.push(...adultStarterWords);
+
+const adultPhraseBank = [
+  {
+    "en": "This is an 18+ word, so use it carefully.",
+    "zh": "這是 18+ 成人詞彙，所以要小心使用。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "This word is very vulgar.",
+    "zh": "這個字非常粗俗。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "This is a porn term, not polite English.",
+    "zh": "這是色情片用語，不是禮貌英文。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "I want you.",
+    "zh": "我想要你。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "You are so sexy.",
+    "zh": "你好性感。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "You turn me on.",
+    "zh": "你讓我興奮。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "I am horny.",
+    "zh": "我性慾上來了／我想做愛。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Touch me.",
+    "zh": "摸我。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Kiss me.",
+    "zh": "親我。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Do not stop.",
+    "zh": "不要停。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Harder.",
+    "zh": "用力一點。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Faster.",
+    "zh": "快一點。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Slower.",
+    "zh": "慢一點。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "I am close.",
+    "zh": "我快到了／快高潮了。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "I am coming.",
+    "zh": "我要高潮了。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Are you comfortable with this?",
+    "zh": "你這樣可以嗎？",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Do you want this?",
+    "zh": "你想要這樣嗎？",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "We can stop anytime.",
+    "zh": "我們隨時都可以停。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Please stop.",
+    "zh": "請停下來。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Use a condom.",
+    "zh": "戴保險套。",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Do you have protection?",
+    "zh": "你有保護措施／保險套嗎？",
+    "tag": "18+成人英文"
+  },
+  {
+    "en": "Have you been tested?",
+    "zh": "你有做過性病檢查嗎？",
+    "tag": "18+成人英文"
+  }
+];
+phraseBank.push(...adultPhraseBank);
+
 let state = loadState();
 let activeView = "cards";
 let cardIndex = 0;
