@@ -1465,6 +1465,7 @@ const adultStarterWords = [
   }
 ];
 starterWords.push(...adultStarterWords);
+starterWords.push(...aiImageStarterWords);
 
 const adultPhraseBank = [
   {
@@ -1578,7 +1579,7205 @@ const adultPhraseBank = [
     "tag": "18+成人英文"
   }
 ];
+
+const aiImageStarterWords = [
+  {
+    "word": "prompt",
+    "meaning": "提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：prompt = 提示詞。常用在 提示詞基礎。",
+    "example": "Write the prompt before you generate the image.",
+    "exampleZh": "提示詞",
+    "options": [
+      "提示詞",
+      "背景",
+      "輪廓光",
+      "高解析修復"
+    ]
+  },
+  {
+    "word": "keyword",
+    "meaning": "關鍵字",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：keyword = 關鍵字。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "關鍵字",
+    "options": [
+      "關鍵字",
+      "構圖",
+      "渲染圖",
+      "臉部細節"
+    ]
+  },
+  {
+    "word": "prompt engineering",
+    "meaning": "提示詞工程",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：prompt engineering = 提示詞工程。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "提示詞工程",
+    "options": [
+      "提示詞工程",
+      "解析度",
+      "顯示記憶體",
+      "插畫風格"
+    ]
+  },
+  {
+    "word": "positive prompt",
+    "meaning": "正向提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：positive prompt = 正向提示詞。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "正向提示詞",
+    "options": [
+      "正向提示詞",
+      "高解析度",
+      "手勢／肢體動作",
+      "採樣器"
+    ]
+  },
+  {
+    "word": "negative prompt",
+    "meaning": "負向提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：negative prompt = 負向提示詞。常用在 提示詞基礎。",
+    "example": "Add a negative prompt to avoid bad anatomy.",
+    "exampleZh": "負向提示詞",
+    "options": [
+      "負向提示詞",
+      "飽和度",
+      "遮罩",
+      "節點"
+    ]
+  },
+  {
+    "word": "tag",
+    "meaning": "標籤詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：tag = 標籤詞。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "標籤詞",
+    "options": [
+      "標籤詞",
+      "節點",
+      "正向提示詞",
+      "材質紋理"
+    ]
+  },
+  {
+    "word": "phrase",
+    "meaning": "片語／短語",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：phrase = 片語／短語。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "片語／短語",
+    "options": [
+      "片語／短語",
+      "角度",
+      "打光／光線",
+      "變體"
+    ]
+  },
+  {
+    "word": "syntax",
+    "meaning": "語法結構",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：syntax = 語法結構。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "語法結構",
+    "options": [
+      "語法結構",
+      "工作流程",
+      "提示詞工程",
+      "渲染圖"
+    ]
+  },
+  {
+    "word": "token",
+    "meaning": "詞元",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：token = 詞元。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "詞元",
+    "options": [
+      "詞元",
+      "高解析修復",
+      "長寬比",
+      "語法結構"
+    ]
+  },
+  {
+    "word": "prompt weight",
+    "meaning": "提示詞權重",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：prompt weight = 提示詞權重。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "提示詞權重",
+    "options": [
+      "提示詞權重",
+      "LoRA 模組",
+      "佇列",
+      "中景"
+    ]
+  },
+  {
+    "word": "wildcard",
+    "meaning": "萬用變數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：wildcard = 萬用變數。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "萬用變數",
+    "options": [
+      "萬用變數",
+      "高解析度",
+      "手勢／肢體動作",
+      "採樣器"
+    ]
+  },
+  {
+    "word": "prompt template",
+    "meaning": "提示詞模板",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：prompt template = 提示詞模板。常用在 提示詞基礎。",
+    "example": "This term is often used in 提示詞基礎 when generating images.",
+    "exampleZh": "提示詞模板",
+    "options": [
+      "提示詞模板",
+      "風格化",
+      "服裝",
+      "種子"
+    ]
+  },
+  {
+    "word": "composition",
+    "meaning": "構圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：composition = 構圖。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "構圖",
+    "options": [
+      "構圖",
+      "排程器",
+      "PNG 參數資訊",
+      "透視"
+    ]
+  },
+  {
+    "word": "framing",
+    "meaning": "取景／框景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：framing = 取景／框景。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "取景／框景",
+    "options": [
+      "取景／框景",
+      "去噪強度",
+      "擴充套件",
+      "寫實風格"
+    ]
+  },
+  {
+    "word": "portrait",
+    "meaning": "人像構圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：portrait = 人像構圖。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "人像構圖",
+    "options": [
+      "人像構圖",
+      "背景",
+      "輪廓光",
+      "高解析修復"
+    ]
+  },
+  {
+    "word": "close-up",
+    "meaning": "特寫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：close-up = 特寫。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "特寫",
+    "options": [
+      "特寫",
+      "片語／短語",
+      "寫實風格",
+      "眼神接觸"
+    ]
+  },
+  {
+    "word": "medium shot",
+    "meaning": "中景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：medium shot = 中景。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "中景",
+    "options": [
+      "中景",
+      "背光",
+      "文生圖",
+      "解析度"
+    ]
+  },
+  {
+    "word": "full body",
+    "meaning": "全身",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：full body = 全身。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "全身",
+    "options": [
+      "全身",
+      "節點",
+      "正向提示詞",
+      "材質紋理"
+    ]
+  },
+  {
+    "word": "wide shot",
+    "meaning": "遠景／廣角畫面",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：wide shot = 遠景／廣角畫面。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "遠景／廣角畫面",
+    "options": [
+      "遠景／廣角畫面",
+      "圖生圖",
+      "ControlNet 控制模組",
+      "提示詞"
+    ]
+  },
+  {
+    "word": "angle",
+    "meaning": "角度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：angle = 角度。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "角度",
+    "options": [
+      "角度",
+      "佇列",
+      "片語／短語",
+      "清晰對焦"
+    ]
+  },
+  {
+    "word": "perspective",
+    "meaning": "透視",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：perspective = 透視。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "透視",
+    "options": [
+      "透視",
+      "種子",
+      "歷史紀錄",
+      "背景"
+    ]
+  },
+  {
+    "word": "background",
+    "meaning": "背景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：background = 背景。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "背景",
+    "options": [
+      "背景",
+      "臉部細節",
+      "LoRA 模組",
+      "顯示卡運算單元"
+    ]
+  },
+  {
+    "word": "foreground",
+    "meaning": "前景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：foreground = 前景。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "前景",
+    "options": [
+      "前景",
+      "VAE 色彩／細節模組",
+      "預覽",
+      "中景"
+    ]
+  },
+  {
+    "word": "depth of field",
+    "meaning": "景深",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：depth of field = 景深。常用在 構圖與鏡位。",
+    "example": "This term is often used in 構圖與鏡位 when generating images.",
+    "exampleZh": "景深",
+    "options": [
+      "景深",
+      "角色",
+      "放大增強",
+      "佇列"
+    ]
+  },
+  {
+    "word": "photorealistic",
+    "meaning": "寫實風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：photorealistic = 寫實風格。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "寫實風格",
+    "options": [
+      "寫實風格",
+      "高品質佳作（常見提示詞）",
+      "人體結構",
+      "步數"
+    ]
+  },
+  {
+    "word": "anime style",
+    "meaning": "動漫風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：anime style = 動漫風格。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "動漫風格",
+    "options": [
+      "動漫風格",
+      "預覽",
+      "語法結構",
+      "風格化"
+    ]
+  },
+  {
+    "word": "illustration",
+    "meaning": "插畫風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：illustration = 插畫風格。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "插畫風格",
+    "options": [
+      "插畫風格",
+      "負向提示詞",
+      "背景",
+      "表情"
+    ]
+  },
+  {
+    "word": "concept art",
+    "meaning": "概念藝術",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：concept art = 概念藝術。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "概念藝術",
+    "options": [
+      "概念藝術",
+      "遮罩",
+      "種子",
+      "正向提示詞"
+    ]
+  },
+  {
+    "word": "line art",
+    "meaning": "線稿",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：line art = 線稿。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "線稿",
+    "options": [
+      "線稿",
+      "批次張數",
+      "提示詞",
+      "插畫風格"
+    ]
+  },
+  {
+    "word": "render",
+    "meaning": "渲染圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：render = 渲染圖。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "渲染圖",
+    "options": [
+      "渲染圖",
+      "手勢／肢體動作",
+      "透明背景",
+      "中繼資料"
+    ]
+  },
+  {
+    "word": "texture",
+    "meaning": "材質紋理",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：texture = 材質紋理。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "材質紋理",
+    "options": [
+      "材質紋理",
+      "解析度",
+      "顯示記憶體",
+      "動漫風格"
+    ]
+  },
+  {
+    "word": "detail",
+    "meaning": "細節",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：detail = 細節。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "細節",
+    "options": [
+      "細節",
+      "對稱性",
+      "模型",
+      "預設組"
+    ]
+  },
+  {
+    "word": "high resolution",
+    "meaning": "高解析度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：high resolution = 高解析度。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "高解析度",
+    "options": [
+      "高解析度",
+      "佇列",
+      "片語／短語",
+      "清晰對焦"
+    ]
+  },
+  {
+    "word": "sharp focus",
+    "meaning": "清晰對焦",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：sharp focus = 清晰對焦。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "清晰對焦",
+    "options": [
+      "清晰對焦",
+      "解析度",
+      "顯示記憶體",
+      "動漫風格"
+    ]
+  },
+  {
+    "word": "stylized",
+    "meaning": "風格化",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：stylized = 風格化。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "風格化",
+    "options": [
+      "風格化",
+      "提示詞",
+      "全身",
+      "配色"
+    ]
+  },
+  {
+    "word": "masterpiece",
+    "meaning": "高品質佳作（常見提示詞）",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：masterpiece = 高品質佳作（常見提示詞）。常用在 風格與畫質。",
+    "example": "This term is often used in 風格與畫質 when generating images.",
+    "exampleZh": "高品質佳作（常見提示詞）",
+    "options": [
+      "高品質佳作（常見提示詞）",
+      "插畫風格",
+      "配色",
+      "模型"
+    ]
+  },
+  {
+    "word": "lighting",
+    "meaning": "打光／光線",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：lighting = 打光／光線。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "打光／光線",
+    "options": [
+      "打光／光線",
+      "正向提示詞",
+      "透視",
+      "姿勢"
+    ]
+  },
+  {
+    "word": "soft light",
+    "meaning": "柔光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：soft light = 柔光。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "柔光",
+    "options": [
+      "柔光",
+      "圖生圖",
+      "ControlNet 控制模組",
+      "提示詞"
+    ]
+  },
+  {
+    "word": "rim light",
+    "meaning": "輪廓光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：rim light = 輪廓光。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "輪廓光",
+    "options": [
+      "輪廓光",
+      "打光／光線",
+      "手部",
+      "去噪強度"
+    ]
+  },
+  {
+    "word": "backlight",
+    "meaning": "背光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：backlight = 背光。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "背光",
+    "options": [
+      "背光",
+      "全身",
+      "風格化",
+      "參考圖"
+    ]
+  },
+  {
+    "word": "ambient light",
+    "meaning": "環境光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：ambient light = 環境光。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "環境光",
+    "options": [
+      "環境光",
+      "眼神接觸",
+      "裁切",
+      "PNG 參數資訊"
+    ]
+  },
+  {
+    "word": "shadows",
+    "meaning": "陰影",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：shadows = 陰影。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "陰影",
+    "options": [
+      "陰影",
+      "採樣器",
+      "中繼資料",
+      "遠景／廣角畫面"
+    ]
+  },
+  {
+    "word": "contrast",
+    "meaning": "對比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：contrast = 對比。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "對比",
+    "options": [
+      "對比",
+      "透明背景",
+      "批次張數",
+      "提示詞權重"
+    ]
+  },
+  {
+    "word": "saturation",
+    "meaning": "飽和度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：saturation = 飽和度。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "飽和度",
+    "options": [
+      "飽和度",
+      "語法結構",
+      "寫實風格",
+      "服裝"
+    ]
+  },
+  {
+    "word": "color palette",
+    "meaning": "配色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：color palette = 配色。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "配色",
+    "options": [
+      "配色",
+      "臉部細節",
+      "LoRA 模組",
+      "顯示卡運算單元"
+    ]
+  },
+  {
+    "word": "tone",
+    "meaning": "色調",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：tone = 色調。常用在 光線與色彩。",
+    "example": "This term is often used in 光線與色彩 when generating images.",
+    "exampleZh": "色調",
+    "options": [
+      "色調",
+      "負向提示詞",
+      "背景",
+      "表情"
+    ]
+  },
+  {
+    "word": "character",
+    "meaning": "角色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：character = 角色。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "角色",
+    "options": [
+      "角色",
+      "提示詞工程",
+      "角度",
+      "色調"
+    ]
+  },
+  {
+    "word": "pose",
+    "meaning": "姿勢",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：pose = 姿勢。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "姿勢",
+    "options": [
+      "姿勢",
+      "全身",
+      "風格化",
+      "參考圖"
+    ]
+  },
+  {
+    "word": "expression",
+    "meaning": "表情",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：expression = 表情。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "表情",
+    "options": [
+      "表情",
+      "臉部細節",
+      "LoRA 模組",
+      "顯示卡運算單元"
+    ]
+  },
+  {
+    "word": "gesture",
+    "meaning": "手勢／肢體動作",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：gesture = 手勢／肢體動作。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "手勢／肢體動作",
+    "options": [
+      "手勢／肢體動作",
+      "遮罩",
+      "種子",
+      "正向提示詞"
+    ]
+  },
+  {
+    "word": "eye contact",
+    "meaning": "眼神接觸",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：eye contact = 眼神接觸。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "眼神接觸",
+    "options": [
+      "眼神接觸",
+      "人體結構",
+      "選取區域",
+      "圖庫"
+    ]
+  },
+  {
+    "word": "outfit",
+    "meaning": "服裝",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：outfit = 服裝。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "服裝",
+    "options": [
+      "服裝",
+      "LoRA 模組",
+      "佇列",
+      "特寫"
+    ]
+  },
+  {
+    "word": "anatomy",
+    "meaning": "人體結構",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：anatomy = 人體結構。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "人體結構",
+    "options": [
+      "人體結構",
+      "模型",
+      "畫布",
+      "取景／框景"
+    ]
+  },
+  {
+    "word": "symmetry",
+    "meaning": "對稱性",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：symmetry = 對稱性。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "對稱性",
+    "options": [
+      "對稱性",
+      "概念藝術",
+      "配色",
+      "模型檔／檢查點"
+    ]
+  },
+  {
+    "word": "hands",
+    "meaning": "手部",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：hands = 手部。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "手部",
+    "options": [
+      "手部",
+      "人像構圖",
+      "細節",
+      "局部重繪"
+    ]
+  },
+  {
+    "word": "face detail",
+    "meaning": "臉部細節",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：face detail = 臉部細節。常用在 人物與姿勢。",
+    "example": "This term is often used in 人物與姿勢 when generating images.",
+    "exampleZh": "臉部細節",
+    "options": [
+      "臉部細節",
+      "透明背景",
+      "批次張數",
+      "提示詞權重"
+    ]
+  },
+  {
+    "word": "text-to-image",
+    "meaning": "文生圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：text-to-image = 文生圖。常用在 生圖模式與編修。",
+    "example": "Text-to-image starts from a written prompt.",
+    "exampleZh": "文生圖",
+    "options": [
+      "文生圖",
+      "細節",
+      "表情",
+      "採樣器"
+    ]
+  },
+  {
+    "word": "image-to-image",
+    "meaning": "圖生圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：image-to-image = 圖生圖。常用在 生圖模式與編修。",
+    "example": "Image-to-image keeps part of the original composition.",
+    "exampleZh": "圖生圖",
+    "options": [
+      "圖生圖",
+      "服裝",
+      "選取區域",
+      "圖庫"
+    ]
+  },
+  {
+    "word": "inpainting",
+    "meaning": "局部重繪",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：inpainting = 局部重繪。常用在 生圖模式與編修。",
+    "example": "Use inpainting to fix the broken hands.",
+    "exampleZh": "局部重繪",
+    "options": [
+      "局部重繪",
+      "提示引導強度",
+      "預設組",
+      "前景"
+    ]
+  },
+  {
+    "word": "outpainting",
+    "meaning": "外延補圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：outpainting = 外延補圖。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "外延補圖",
+    "options": [
+      "外延補圖",
+      "背光",
+      "文生圖",
+      "批次張數"
+    ]
+  },
+  {
+    "word": "mask",
+    "meaning": "遮罩",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：mask = 遮罩。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "遮罩",
+    "options": [
+      "遮罩",
+      "環境光",
+      "圖生圖",
+      "Clip Skip 文字理解層跳過"
+    ]
+  },
+  {
+    "word": "reference image",
+    "meaning": "參考圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：reference image = 參考圖。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "參考圖",
+    "options": [
+      "參考圖",
+      "片語／短語",
+      "景深",
+      "手勢／肢體動作"
+    ]
+  },
+  {
+    "word": "variation",
+    "meaning": "變體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：variation = 變體。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "變體",
+    "options": [
+      "變體",
+      "提示引導強度",
+      "預設組",
+      "前景"
+    ]
+  },
+  {
+    "word": "upscale",
+    "meaning": "放大增強",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：upscale = 放大增強。常用在 生圖模式與編修。",
+    "example": "Upscale the final image to make it clearer.",
+    "exampleZh": "放大增強",
+    "options": [
+      "放大增強",
+      "裁切",
+      "Clip Skip 文字理解層跳過",
+      "萬用變數"
+    ]
+  },
+  {
+    "word": "highres fix",
+    "meaning": "高解析修復",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：highres fix = 高解析修復。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "高解析修復",
+    "options": [
+      "高解析修復",
+      "顯示卡運算單元",
+      "特寫",
+      "陰影"
+    ]
+  },
+  {
+    "word": "face restore",
+    "meaning": "臉部修復",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：face restore = 臉部修復。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "臉部修復",
+    "options": [
+      "臉部修復",
+      "表情",
+      "透明背景",
+      "中繼資料"
+    ]
+  },
+  {
+    "word": "transparent background",
+    "meaning": "透明背景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：transparent background = 透明背景。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "透明背景",
+    "options": [
+      "透明背景",
+      "參考圖",
+      "提示引導強度",
+      "標籤詞"
+    ]
+  },
+  {
+    "word": "crop",
+    "meaning": "裁切",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：crop = 裁切。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "裁切",
+    "options": [
+      "裁切",
+      "姿勢",
+      "高解析修復",
+      "匯出"
+    ]
+  },
+  {
+    "word": "background removal",
+    "meaning": "去背",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：background removal = 去背。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "去背",
+    "options": [
+      "去背",
+      "表情",
+      "臉部修復",
+      "中繼資料"
+    ]
+  },
+  {
+    "word": "selected region",
+    "meaning": "選取區域",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：selected region = 選取區域。常用在 生圖模式與編修。",
+    "example": "This term is often used in 生圖模式與編修 when generating images.",
+    "exampleZh": "選取區域",
+    "options": [
+      "選取區域",
+      "提示詞模板",
+      "線稿",
+      "手部"
+    ]
+  },
+  {
+    "word": "model",
+    "meaning": "模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：model = 模型。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "模型",
+    "options": [
+      "模型",
+      "解析度",
+      "顯示記憶體",
+      "動漫風格"
+    ]
+  },
+  {
+    "word": "checkpoint",
+    "meaning": "模型檔／檢查點",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：checkpoint = 模型檔／檢查點。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "模型檔／檢查點",
+    "options": [
+      "模型檔／檢查點",
+      "PNG 參數資訊",
+      "萬用變數",
+      "打光／光線"
+    ]
+  },
+  {
+    "word": "LoRA",
+    "meaning": "LoRA 模組",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：LoRA = LoRA 模組。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "LoRA 模組",
+    "options": [
+      "LoRA 模組",
+      "服裝",
+      "去背",
+      "圖庫"
+    ]
+  },
+  {
+    "word": "VAE",
+    "meaning": "VAE 色彩／細節模組",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：VAE = VAE 色彩／細節模組。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "VAE 色彩／細節模組",
+    "options": [
+      "VAE 色彩／細節模組",
+      "提示詞權重",
+      "插畫風格",
+      "人體結構"
+    ]
+  },
+  {
+    "word": "ControlNet",
+    "meaning": "ControlNet 控制模組",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：ControlNet = ControlNet 控制模組。常用在 模型與進階設定。",
+    "example": "ControlNet can help keep the pose stable.",
+    "exampleZh": "ControlNet 控制模組",
+    "options": [
+      "ControlNet 控制模組",
+      "顯示卡運算單元",
+      "特寫",
+      "陰影"
+    ]
+  },
+  {
+    "word": "sampler",
+    "meaning": "採樣器",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：sampler = 採樣器。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "採樣器",
+    "options": [
+      "採樣器",
+      "人體結構",
+      "選取區域",
+      "預設組"
+    ]
+  },
+  {
+    "word": "scheduler",
+    "meaning": "排程器",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：scheduler = 排程器。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "排程器",
+    "options": [
+      "排程器",
+      "人像構圖",
+      "細節",
+      "圖生圖"
+    ]
+  },
+  {
+    "word": "seed",
+    "meaning": "種子",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：seed = 種子。常用在 模型與進階設定。",
+    "example": "Use the same seed if you want a similar result.",
+    "exampleZh": "種子",
+    "options": [
+      "種子",
+      "去噪強度",
+      "擴充套件",
+      "景深"
+    ]
+  },
+  {
+    "word": "steps",
+    "meaning": "步數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：steps = 步數。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "步數",
+    "options": [
+      "步數",
+      "工作流程",
+      "提示詞工程",
+      "線稿"
+    ]
+  },
+  {
+    "word": "CFG scale",
+    "meaning": "提示引導強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：CFG scale = 提示引導強度。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "提示引導強度",
+    "options": [
+      "提示引導強度",
+      "高品質佳作（常見提示詞）",
+      "人體結構",
+      "步數"
+    ]
+  },
+  {
+    "word": "denoise strength",
+    "meaning": "去噪強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：denoise strength = 去噪強度。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "去噪強度",
+    "options": [
+      "去噪強度",
+      "PNG 參數資訊",
+      "萬用變數",
+      "打光／光線"
+    ]
+  },
+  {
+    "word": "aspect ratio",
+    "meaning": "長寬比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：aspect ratio = 長寬比。常用在 模型與進階設定。",
+    "example": "Choose the right aspect ratio for your poster.",
+    "exampleZh": "長寬比",
+    "options": [
+      "長寬比",
+      "提示詞模板",
+      "線稿",
+      "手部"
+    ]
+  },
+  {
+    "word": "resolution",
+    "meaning": "解析度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：resolution = 解析度。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "解析度",
+    "options": [
+      "解析度",
+      "輪廓光",
+      "臉部細節",
+      "長寬比"
+    ]
+  },
+  {
+    "word": "batch size",
+    "meaning": "批次張數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：batch size = 批次張數。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "批次張數",
+    "options": [
+      "批次張數",
+      "畫布",
+      "負向提示詞",
+      "材質紋理"
+    ]
+  },
+  {
+    "word": "clip skip",
+    "meaning": "Clip Skip 文字理解層跳過",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：clip skip = Clip Skip 文字理解層跳過。常用在 模型與進階設定。",
+    "example": "This term is often used in 模型與進階設定 when generating images.",
+    "exampleZh": "Clip Skip 文字理解層跳過",
+    "options": [
+      "Clip Skip 文字理解層跳過",
+      "放大增強",
+      "去噪強度",
+      "語法結構"
+    ]
+  },
+  {
+    "word": "workflow",
+    "meaning": "工作流程",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：workflow = 工作流程。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "工作流程",
+    "options": [
+      "工作流程",
+      "遮罩",
+      "種子",
+      "負向提示詞"
+    ]
+  },
+  {
+    "word": "node",
+    "meaning": "節點",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：node = 節點。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "節點",
+    "options": [
+      "節點",
+      "提示詞模板",
+      "線稿",
+      "手部"
+    ]
+  },
+  {
+    "word": "canvas",
+    "meaning": "畫布",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：canvas = 畫布。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "畫布",
+    "options": [
+      "畫布",
+      "中繼資料",
+      "提示詞權重",
+      "高品質佳作（常見提示詞）"
+    ]
+  },
+  {
+    "word": "layer",
+    "meaning": "圖層",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：layer = 圖層。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "圖層",
+    "options": [
+      "圖層",
+      "渲染圖",
+      "角色",
+      "LoRA 模組"
+    ]
+  },
+  {
+    "word": "queue",
+    "meaning": "佇列",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：queue = 佇列。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "佇列",
+    "options": [
+      "佇列",
+      "外延補圖",
+      "排程器",
+      "正向提示詞"
+    ]
+  },
+  {
+    "word": "preview",
+    "meaning": "預覽",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：preview = 預覽。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "預覽",
+    "options": [
+      "預覽",
+      "佇列",
+      "語法結構",
+      "清晰對焦"
+    ]
+  },
+  {
+    "word": "export",
+    "meaning": "匯出",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：export = 匯出。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "匯出",
+    "options": [
+      "匯出",
+      "眼神接觸",
+      "裁切",
+      "歷史紀錄"
+    ]
+  },
+  {
+    "word": "metadata",
+    "meaning": "中繼資料",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：metadata = 中繼資料。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "中繼資料",
+    "options": [
+      "中繼資料",
+      "萬用變數",
+      "概念藝術",
+      "對稱性"
+    ]
+  },
+  {
+    "word": "PNG info",
+    "meaning": "PNG 參數資訊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：PNG info = PNG 參數資訊。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "PNG 參數資訊",
+    "options": [
+      "PNG 參數資訊",
+      "打光／光線",
+      "對稱性",
+      "提示引導強度"
+    ]
+  },
+  {
+    "word": "history",
+    "meaning": "歷史紀錄",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：history = 歷史紀錄。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "歷史紀錄",
+    "options": [
+      "歷史紀錄",
+      "工作流程",
+      "正向提示詞",
+      "渲染圖"
+    ]
+  },
+  {
+    "word": "gallery",
+    "meaning": "圖庫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：gallery = 圖庫。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "圖庫",
+    "options": [
+      "圖庫",
+      "渲染圖",
+      "角色",
+      "LoRA 模組"
+    ]
+  },
+  {
+    "word": "preset",
+    "meaning": "預設組",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：preset = 預設組。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "預設組",
+    "options": [
+      "預設組",
+      "對稱性",
+      "模型",
+      "擴充套件"
+    ]
+  },
+  {
+    "word": "extension",
+    "meaning": "擴充套件",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：extension = 擴充套件。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "擴充套件",
+    "options": [
+      "擴充套件",
+      "角色",
+      "放大增強",
+      "佇列"
+    ]
+  },
+  {
+    "word": "GPU",
+    "meaning": "顯示卡運算單元",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：GPU = 顯示卡運算單元。常用在 軟體操作與流程。",
+    "example": "This term is often used in 軟體操作與流程 when generating images.",
+    "exampleZh": "顯示卡運算單元",
+    "options": [
+      "顯示卡運算單元",
+      "人體結構",
+      "選取區域",
+      "圖庫"
+    ]
+  },
+  {
+    "word": "VRAM",
+    "meaning": "顯示記憶體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 生圖英文",
+    "picture": "🎨",
+    "memory": "AI 生圖詞彙：VRAM = 顯示記憶體。常用在 軟體操作與流程。",
+    "example": "Large images will use more VRAM.",
+    "exampleZh": "顯示記憶體",
+    "options": [
+      "顯示記憶體",
+      "Clip Skip 文字理解層跳過",
+      "提示詞工程",
+      "線稿"
+    ]
+  }
+];
+
+const aiImagePhraseBank = [
+  {
+    "en": "Write a clear prompt first.",
+    "zh": "先寫一個清楚的提示詞。",
+    "tag": "AI 生圖英文・提示詞基礎"
+  },
+  {
+    "en": "Add a negative prompt to avoid extra fingers.",
+    "zh": "加入負向提示詞，避免多出手指。",
+    "tag": "AI 生圖英文・提示詞基礎"
+  },
+  {
+    "en": "Use stronger prompt weight for the main subject.",
+    "zh": "把主體的提示詞權重調高一點。",
+    "tag": "AI 生圖英文・提示詞基礎"
+  },
+  {
+    "en": "Use a full body composition.",
+    "zh": "使用全身構圖。",
+    "tag": "AI 生圖英文・構圖與鏡位"
+  },
+  {
+    "en": "Move the camera angle a little lower.",
+    "zh": "把鏡頭角度再往低一點。",
+    "tag": "AI 生圖英文・構圖與鏡位"
+  },
+  {
+    "en": "Add more depth of field to the background.",
+    "zh": "替背景增加更多景深效果。",
+    "tag": "AI 生圖英文・構圖與鏡位"
+  },
+  {
+    "en": "Make the style more cinematic.",
+    "zh": "讓風格更有電影感。",
+    "tag": "AI 生圖英文・風格與畫質"
+  },
+  {
+    "en": "I want a photorealistic portrait.",
+    "zh": "我想要一張寫實風格的人像。",
+    "tag": "AI 生圖英文・風格與畫質"
+  },
+  {
+    "en": "Increase the detail and sharp focus.",
+    "zh": "提高細節與清晰對焦。",
+    "tag": "AI 生圖英文・風格與畫質"
+  },
+  {
+    "en": "Use soft light on the face.",
+    "zh": "在臉部使用柔光。",
+    "tag": "AI 生圖英文・光線與色彩"
+  },
+  {
+    "en": "The color palette should be warm and soft.",
+    "zh": "配色應該偏暖且柔和。",
+    "tag": "AI 生圖英文・光線與色彩"
+  },
+  {
+    "en": "The contrast is too high.",
+    "zh": "對比度太高了。",
+    "tag": "AI 生圖英文・光線與色彩"
+  },
+  {
+    "en": "Fix the hands and facial anatomy.",
+    "zh": "修正手部和臉部的人體結構。",
+    "tag": "AI 生圖英文・人物與姿勢"
+  },
+  {
+    "en": "Give the character a natural smile.",
+    "zh": "讓角色露出自然的微笑。",
+    "tag": "AI 生圖英文・人物與姿勢"
+  },
+  {
+    "en": "Change the pose to a sitting position.",
+    "zh": "把姿勢改成坐姿。",
+    "tag": "AI 生圖英文・人物與姿勢"
+  },
+  {
+    "en": "Use inpainting to fix the eyes.",
+    "zh": "用局部重繪來修眼睛。",
+    "tag": "AI 生圖英文・生圖模式與編修"
+  },
+  {
+    "en": "Use outpainting to extend the background.",
+    "zh": "用外延補圖把背景延伸出去。",
+    "tag": "AI 生圖英文・生圖模式與編修"
+  },
+  {
+    "en": "Upscale the final image after generation.",
+    "zh": "生成完成後再把最終圖片放大增強。",
+    "tag": "AI 生圖英文・生圖模式與編修"
+  },
+  {
+    "en": "Try another sampler with the same seed.",
+    "zh": "用相同種子試試另一個採樣器。",
+    "tag": "AI 生圖英文・模型與進階設定"
+  },
+  {
+    "en": "Lower the denoise strength a little.",
+    "zh": "把去噪強度稍微降低一點。",
+    "tag": "AI 生圖英文・模型與進階設定"
+  },
+  {
+    "en": "Set the aspect ratio to 9:16.",
+    "zh": "把長寬比設成 9:16。",
+    "tag": "AI 生圖英文・模型與進階設定"
+  },
+  {
+    "en": "Load the LoRA before generating.",
+    "zh": "生成前先載入 LoRA。",
+    "tag": "AI 生圖英文・模型與進階設定"
+  },
+  {
+    "en": "Save this workflow as a preset.",
+    "zh": "把這個工作流程存成預設組。",
+    "tag": "AI 生圖英文・軟體操作與流程"
+  },
+  {
+    "en": "My GPU is running out of VRAM.",
+    "zh": "我的顯卡 VRAM 快不夠了。",
+    "tag": "AI 生圖英文・軟體操作與流程"
+  },
+  {
+    "en": "Check the PNG info for the original settings.",
+    "zh": "查看 PNG 資訊，確認原始參數設定。",
+    "tag": "AI 生圖英文・軟體操作與流程"
+  },
+  {
+    "en": "Queue four image variations.",
+    "zh": "排入四張圖片變體。",
+    "tag": "AI 生圖英文・軟體操作與流程"
+  }
+];
+
 phraseBank.push(...adultPhraseBank);
+phraseBank.push(...aiImagePhraseBank);
+
+
+const imageGenStarterWords = [
+  {
+    "word": "prompt",
+    "meaning": "提示詞；你輸入給 AI 的描述",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt = 提示詞；你輸入給 AI 的描述。",
+    "example": "Use prompt when working with AI image generation.",
+    "exampleZh": "提示詞；你輸入給 AI 的描述",
+    "options": [
+      "提示詞；你輸入給 AI 的描述",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "positive prompt",
+    "meaning": "正向提示詞；想出現的內容",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：positive prompt = 正向提示詞；想出現的內容。",
+    "example": "Use positive prompt when working with AI image generation.",
+    "exampleZh": "正向提示詞；想出現的內容",
+    "options": [
+      "正向提示詞；想出現的內容",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "negative prompt",
+    "meaning": "反向提示詞；不想出現的內容",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：negative prompt = 反向提示詞；不想出現的內容。",
+    "example": "Use negative prompt when working with AI image generation.",
+    "exampleZh": "反向提示詞；不想出現的內容",
+    "options": [
+      "反向提示詞；不想出現的內容",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "tag",
+    "meaning": "標籤；常用於動漫或模型提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：tag = 標籤；常用於動漫或模型提示詞。",
+    "example": "Use tag when working with AI image generation.",
+    "exampleZh": "標籤；常用於動漫或模型提示詞",
+    "options": [
+      "標籤；常用於動漫或模型提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "keyword",
+    "meaning": "關鍵字",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：keyword = 關鍵字。",
+    "example": "Use keyword when working with AI image generation.",
+    "exampleZh": "關鍵字",
+    "options": [
+      "關鍵字",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "token",
+    "meaning": "模型讀取的文字單位",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：token = 模型讀取的文字單位。",
+    "example": "Use token when working with AI image generation.",
+    "exampleZh": "模型讀取的文字單位",
+    "options": [
+      "模型讀取的文字單位",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "phrase",
+    "meaning": "片語；一組提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：phrase = 片語；一組提示詞。",
+    "example": "Use phrase when working with AI image generation.",
+    "exampleZh": "片語；一組提示詞",
+    "options": [
+      "片語；一組提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "caption",
+    "meaning": "圖片描述文字",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：caption = 圖片描述文字。",
+    "example": "Use caption when working with AI image generation.",
+    "exampleZh": "圖片描述文字",
+    "options": [
+      "圖片描述文字",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt engineering",
+    "meaning": "提示詞工程；設計提示詞的方法",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt engineering = 提示詞工程；設計提示詞的方法。",
+    "example": "Use prompt engineering when working with AI image generation.",
+    "exampleZh": "提示詞工程；設計提示詞的方法",
+    "options": [
+      "提示詞工程；設計提示詞的方法",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt syntax",
+    "meaning": "提示詞語法",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt syntax = 提示詞語法。",
+    "example": "Use prompt syntax when working with AI image generation.",
+    "exampleZh": "提示詞語法",
+    "options": [
+      "提示詞語法",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt order",
+    "meaning": "提示詞順序",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt order = 提示詞順序。",
+    "example": "Use prompt order when working with AI image generation.",
+    "exampleZh": "提示詞順序",
+    "options": [
+      "提示詞順序",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "weight",
+    "meaning": "權重；提高或降低某個詞的重要性",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：weight = 權重；提高或降低某個詞的重要性。",
+    "example": "Use weight when working with AI image generation.",
+    "exampleZh": "權重；提高或降低某個詞的重要性",
+    "options": [
+      "權重；提高或降低某個詞的重要性",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "emphasis",
+    "meaning": "加強權重；讓詞更重要",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：emphasis = 加強權重；讓詞更重要。",
+    "example": "Use emphasis when working with AI image generation.",
+    "exampleZh": "加強權重；讓詞更重要",
+    "options": [
+      "加強權重；讓詞更重要",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "de-emphasis",
+    "meaning": "降低權重；讓詞較不重要",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：de-emphasis = 降低權重；讓詞較不重要。",
+    "example": "Use de-emphasis when working with AI image generation.",
+    "exampleZh": "降低權重；讓詞較不重要",
+    "options": [
+      "降低權重；讓詞較不重要",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "parentheses",
+    "meaning": "小括號；常用來加強權重",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：parentheses = 小括號；常用來加強權重。",
+    "example": "Use parentheses when working with AI image generation.",
+    "exampleZh": "小括號；常用來加強權重",
+    "options": [
+      "小括號；常用來加強權重",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "brackets",
+    "meaning": "中括號；常用來降低權重",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：brackets = 中括號；常用來降低權重。",
+    "example": "Use brackets when working with AI image generation.",
+    "exampleZh": "中括號；常用來降低權重",
+    "options": [
+      "中括號；常用來降低權重",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "comma",
+    "meaning": "逗號；用來分隔提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：comma = 逗號；用來分隔提示詞。",
+    "example": "Use comma when working with AI image generation.",
+    "exampleZh": "逗號；用來分隔提示詞",
+    "options": [
+      "逗號；用來分隔提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "wildcard",
+    "meaning": "萬用詞；隨機替換提示詞用",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：wildcard = 萬用詞；隨機替換提示詞用。",
+    "example": "Use wildcard when working with AI image generation.",
+    "exampleZh": "萬用詞；隨機替換提示詞用",
+    "options": [
+      "萬用詞；隨機替換提示詞用",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "template",
+    "meaning": "提示詞模板",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：template = 提示詞模板。",
+    "example": "Use template when working with AI image generation.",
+    "exampleZh": "提示詞模板",
+    "options": [
+      "提示詞模板",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "preset",
+    "meaning": "預設組合",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：preset = 預設組合。",
+    "example": "Use preset when working with AI image generation.",
+    "exampleZh": "預設組合",
+    "options": [
+      "預設組合",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "style preset",
+    "meaning": "風格預設",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：style preset = 風格預設。",
+    "example": "Use style preset when working with AI image generation.",
+    "exampleZh": "風格預設",
+    "options": [
+      "風格預設",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "trigger word",
+    "meaning": "觸發詞；啟動 LoRA 或風格的關鍵詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：trigger word = 觸發詞；啟動 LoRA 或風格的關鍵詞。",
+    "example": "Use trigger word when working with AI image generation.",
+    "exampleZh": "觸發詞；啟動 LoRA 或風格的關鍵詞",
+    "options": [
+      "觸發詞；啟動 LoRA 或風格的關鍵詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt mixing",
+    "meaning": "混合提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt mixing = 混合提示詞。",
+    "example": "Use prompt mixing when working with AI image generation.",
+    "exampleZh": "混合提示詞",
+    "options": [
+      "混合提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt scheduling",
+    "meaning": "提示詞排程；不同階段使用不同提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：prompt scheduling = 提示詞排程；不同階段使用不同提示詞。",
+    "example": "Use prompt scheduling when working with AI image generation.",
+    "exampleZh": "提示詞排程；不同階段使用不同提示詞",
+    "options": [
+      "提示詞排程；不同階段使用不同提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "blend",
+    "meaning": "混合；把概念或圖像融合",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：blend = 混合；把概念或圖像融合。",
+    "example": "Use blend when working with AI image generation.",
+    "exampleZh": "混合；把概念或圖像融合",
+    "options": [
+      "混合；把概念或圖像融合",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "reference prompt",
+    "meaning": "參考提示詞；仿照範例寫法",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "✍️",
+    "memory": "AI 生圖詞彙：reference prompt = 參考提示詞；仿照範例寫法。",
+    "example": "Use reference prompt when working with AI image generation.",
+    "exampleZh": "參考提示詞；仿照範例寫法",
+    "options": [
+      "參考提示詞；仿照範例寫法",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "model",
+    "meaning": "模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：model = 模型。",
+    "example": "Use model when working with AI image generation.",
+    "exampleZh": "模型",
+    "options": [
+      "模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "base model",
+    "meaning": "基礎模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：base model = 基礎模型。",
+    "example": "Use base model when working with AI image generation.",
+    "exampleZh": "基礎模型",
+    "options": [
+      "基礎模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "checkpoint",
+    "meaning": "主模型檔；常見 Stable Diffusion 模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：checkpoint = 主模型檔；常見 Stable Diffusion 模型。",
+    "example": "Use checkpoint when working with AI image generation.",
+    "exampleZh": "主模型檔；常見 Stable Diffusion 模型",
+    "options": [
+      "主模型檔；常見 Stable Diffusion 模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "safetensors",
+    "meaning": "常見模型檔格式，較安全",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：safetensors = 常見模型檔格式，較安全。",
+    "example": "Use safetensors when working with AI image generation.",
+    "exampleZh": "常見模型檔格式，較安全",
+    "options": [
+      "常見模型檔格式，較安全",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "diffusion model",
+    "meaning": "擴散模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：diffusion model = 擴散模型。",
+    "example": "Use diffusion model when working with AI image generation.",
+    "exampleZh": "擴散模型",
+    "options": [
+      "擴散模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Stable Diffusion",
+    "meaning": "穩定擴散；常見開源生圖模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：Stable Diffusion = 穩定擴散；常見開源生圖模型。",
+    "example": "Use Stable Diffusion when working with AI image generation.",
+    "exampleZh": "穩定擴散；常見開源生圖模型",
+    "options": [
+      "穩定擴散；常見開源生圖模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "SDXL",
+    "meaning": "Stable Diffusion XL，大尺寸高品質模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：SDXL = Stable Diffusion XL，大尺寸高品質模型。",
+    "example": "Use SDXL when working with AI image generation.",
+    "exampleZh": "Stable Diffusion XL，大尺寸高品質模型",
+    "options": [
+      "Stable Diffusion XL，大尺寸高品質模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Flux",
+    "meaning": "常見新一代圖像生成模型名稱",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：Flux = 常見新一代圖像生成模型名稱。",
+    "example": "Use Flux when working with AI image generation.",
+    "exampleZh": "常見新一代圖像生成模型名稱",
+    "options": [
+      "常見新一代圖像生成模型名稱",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Midjourney",
+    "meaning": "常見線上 AI 生圖服務",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：Midjourney = 常見線上 AI 生圖服務。",
+    "example": "Use Midjourney when working with AI image generation.",
+    "exampleZh": "常見線上 AI 生圖服務",
+    "options": [
+      "常見線上 AI 生圖服務",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "DALL-E",
+    "meaning": "OpenAI 的圖像生成模型名稱",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：DALL-E = OpenAI 的圖像生成模型名稱。",
+    "example": "Use DALL-E when working with AI image generation.",
+    "exampleZh": "OpenAI 的圖像生成模型名稱",
+    "options": [
+      "OpenAI 的圖像生成模型名稱",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "LoRA",
+    "meaning": "小型風格或角色模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：LoRA = 小型風格或角色模型。",
+    "example": "Use LoRA when working with AI image generation.",
+    "exampleZh": "小型風格或角色模型",
+    "options": [
+      "小型風格或角色模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "LoRA weight",
+    "meaning": "LoRA 權重；控制 LoRA 影響強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：LoRA weight = LoRA 權重；控制 LoRA 影響強度。",
+    "example": "Use LoRA weight when working with AI image generation.",
+    "exampleZh": "LoRA 權重；控制 LoRA 影響強度",
+    "options": [
+      "LoRA 權重；控制 LoRA 影響強度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "LyCORIS",
+    "meaning": "類似 LoRA 的模型擴充格式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：LyCORIS = 類似 LoRA 的模型擴充格式。",
+    "example": "Use LyCORIS when working with AI image generation.",
+    "exampleZh": "類似 LoRA 的模型擴充格式",
+    "options": [
+      "類似 LoRA 的模型擴充格式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "embedding",
+    "meaning": "嵌入模型；文字反轉常用資源",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：embedding = 嵌入模型；文字反轉常用資源。",
+    "example": "Use embedding when working with AI image generation.",
+    "exampleZh": "嵌入模型；文字反轉常用資源",
+    "options": [
+      "嵌入模型；文字反轉常用資源",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "textual inversion",
+    "meaning": "文字反轉；用小型向量學習概念",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：textual inversion = 文字反轉；用小型向量學習概念。",
+    "example": "Use textual inversion when working with AI image generation.",
+    "exampleZh": "文字反轉；用小型向量學習概念",
+    "options": [
+      "文字反轉；用小型向量學習概念",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hypernetwork",
+    "meaning": "舊式風格擴充模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：hypernetwork = 舊式風格擴充模型。",
+    "example": "Use hypernetwork when working with AI image generation.",
+    "exampleZh": "舊式風格擴充模型",
+    "options": [
+      "舊式風格擴充模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "VAE",
+    "meaning": "影像編碼解碼模型，影響色彩與細節",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：VAE = 影像編碼解碼模型，影響色彩與細節。",
+    "example": "Use VAE when working with AI image generation.",
+    "exampleZh": "影像編碼解碼模型，影響色彩與細節",
+    "options": [
+      "影像編碼解碼模型，影響色彩與細節",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "refiner",
+    "meaning": "精修模型；後段改善細節",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：refiner = 精修模型；後段改善細節。",
+    "example": "Use refiner when working with AI image generation.",
+    "exampleZh": "精修模型；後段改善細節",
+    "options": [
+      "精修模型；後段改善細節",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "inpaint model",
+    "meaning": "局部重繪模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：inpaint model = 局部重繪模型。",
+    "example": "Use inpaint model when working with AI image generation.",
+    "exampleZh": "局部重繪模型",
+    "options": [
+      "局部重繪模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "control model",
+    "meaning": "控制模型；搭配 ControlNet 使用",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：control model = 控制模型；搭配 ControlNet 使用。",
+    "example": "Use control model when working with AI image generation.",
+    "exampleZh": "控制模型；搭配 ControlNet 使用",
+    "options": [
+      "控制模型；搭配 ControlNet 使用",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "upscale model",
+    "meaning": "放大模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：upscale model = 放大模型。",
+    "example": "Use upscale model when working with AI image generation.",
+    "exampleZh": "放大模型",
+    "options": [
+      "放大模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "face model",
+    "meaning": "臉部修復或人像相關模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：face model = 臉部修復或人像相關模型。",
+    "example": "Use face model when working with AI image generation.",
+    "exampleZh": "臉部修復或人像相關模型",
+    "options": [
+      "臉部修復或人像相關模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "model merge",
+    "meaning": "模型合併",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：model merge = 模型合併。",
+    "example": "Use model merge when working with AI image generation.",
+    "exampleZh": "模型合併",
+    "options": [
+      "模型合併",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "training data",
+    "meaning": "訓練資料",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：training data = 訓練資料。",
+    "example": "Use training data when working with AI image generation.",
+    "exampleZh": "訓練資料",
+    "options": [
+      "訓練資料",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "dataset",
+    "meaning": "資料集",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：dataset = 資料集。",
+    "example": "Use dataset when working with AI image generation.",
+    "exampleZh": "資料集",
+    "options": [
+      "資料集",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fine-tuning",
+    "meaning": "微調模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：fine-tuning = 微調模型。",
+    "example": "Use fine-tuning when working with AI image generation.",
+    "exampleZh": "微調模型",
+    "options": [
+      "微調模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "overfitting",
+    "meaning": "過度擬合；模型太記住訓練圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：overfitting = 過度擬合；模型太記住訓練圖。",
+    "example": "Use overfitting when working with AI image generation.",
+    "exampleZh": "過度擬合；模型太記住訓練圖",
+    "options": [
+      "過度擬合；模型太記住訓練圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "undertrained",
+    "meaning": "訓練不足",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：undertrained = 訓練不足。",
+    "example": "Use undertrained when working with AI image generation.",
+    "exampleZh": "訓練不足",
+    "options": [
+      "訓練不足",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "version",
+    "meaning": "版本",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：version = 版本。",
+    "example": "Use version when working with AI image generation.",
+    "exampleZh": "版本",
+    "options": [
+      "版本",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "license",
+    "meaning": "授權；模型使用規則",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧠",
+    "memory": "AI 生圖詞彙：license = 授權；模型使用規則。",
+    "example": "Use license when working with AI image generation.",
+    "exampleZh": "授權；模型使用規則",
+    "options": [
+      "授權；模型使用規則",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "sampler",
+    "meaning": "採樣器；影響出圖方式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：sampler = 採樣器；影響出圖方式。",
+    "example": "Use sampler when working with AI image generation.",
+    "exampleZh": "採樣器；影響出圖方式",
+    "options": [
+      "採樣器；影響出圖方式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "sampling method",
+    "meaning": "採樣方法",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：sampling method = 採樣方法。",
+    "example": "Use sampling method when working with AI image generation.",
+    "exampleZh": "採樣方法",
+    "options": [
+      "採樣方法",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "scheduler",
+    "meaning": "排程器；控制降噪流程",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：scheduler = 排程器；控制降噪流程。",
+    "example": "Use scheduler when working with AI image generation.",
+    "exampleZh": "排程器；控制降噪流程",
+    "options": [
+      "排程器；控制降噪流程",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "steps",
+    "meaning": "步數；生成運算次數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：steps = 步數；生成運算次數。",
+    "example": "Use steps when working with AI image generation.",
+    "exampleZh": "步數；生成運算次數",
+    "options": [
+      "步數；生成運算次數",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "CFG scale",
+    "meaning": "提示詞遵從強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：CFG scale = 提示詞遵從強度。",
+    "example": "Use CFG scale when working with AI image generation.",
+    "exampleZh": "提示詞遵從強度",
+    "options": [
+      "提示詞遵從強度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "guidance scale",
+    "meaning": "引導強度；類似 CFG scale",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：guidance scale = 引導強度；類似 CFG scale。",
+    "example": "Use guidance scale when working with AI image generation.",
+    "exampleZh": "引導強度；類似 CFG scale",
+    "options": [
+      "引導強度；類似 CFG scale",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "seed",
+    "meaning": "種子碼；控制隨機結果",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：seed = 種子碼；控制隨機結果。",
+    "example": "Use seed when working with AI image generation.",
+    "exampleZh": "種子碼；控制隨機結果",
+    "options": [
+      "種子碼；控制隨機結果",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "random seed",
+    "meaning": "隨機種子",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：random seed = 隨機種子。",
+    "example": "Use random seed when working with AI image generation.",
+    "exampleZh": "隨機種子",
+    "options": [
+      "隨機種子",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fixed seed",
+    "meaning": "固定種子；方便重現同一張圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：fixed seed = 固定種子；方便重現同一張圖。",
+    "example": "Use fixed seed when working with AI image generation.",
+    "exampleZh": "固定種子；方便重現同一張圖",
+    "options": [
+      "固定種子；方便重現同一張圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "batch size",
+    "meaning": "同時生成幾張",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：batch size = 同時生成幾張。",
+    "example": "Use batch size when working with AI image generation.",
+    "exampleZh": "同時生成幾張",
+    "options": [
+      "同時生成幾張",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "batch count",
+    "meaning": "連續生成幾批",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：batch count = 連續生成幾批。",
+    "example": "Use batch count when working with AI image generation.",
+    "exampleZh": "連續生成幾批",
+    "options": [
+      "連續生成幾批",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "width",
+    "meaning": "寬度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：width = 寬度。",
+    "example": "Use width when working with AI image generation.",
+    "exampleZh": "寬度",
+    "options": [
+      "寬度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "height",
+    "meaning": "高度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：height = 高度。",
+    "example": "Use height when working with AI image generation.",
+    "exampleZh": "高度",
+    "options": [
+      "高度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "resolution",
+    "meaning": "解析度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：resolution = 解析度。",
+    "example": "Use resolution when working with AI image generation.",
+    "exampleZh": "解析度",
+    "options": [
+      "解析度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "aspect ratio",
+    "meaning": "長寬比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：aspect ratio = 長寬比。",
+    "example": "Use aspect ratio when working with AI image generation.",
+    "exampleZh": "長寬比",
+    "options": [
+      "長寬比",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "denoise strength",
+    "meaning": "重繪幅度；img2img 常用",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：denoise strength = 重繪幅度；img2img 常用。",
+    "example": "Use denoise strength when working with AI image generation.",
+    "exampleZh": "重繪幅度；img2img 常用",
+    "options": [
+      "重繪幅度；img2img 常用",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "noise",
+    "meaning": "雜訊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：noise = 雜訊。",
+    "example": "Use noise when working with AI image generation.",
+    "exampleZh": "雜訊",
+    "options": [
+      "雜訊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "latent space",
+    "meaning": "潛空間；模型內部影像空間",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：latent space = 潛空間；模型內部影像空間。",
+    "example": "Use latent space when working with AI image generation.",
+    "exampleZh": "潛空間；模型內部影像空間",
+    "options": [
+      "潛空間；模型內部影像空間",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "CLIP skip",
+    "meaning": "跳過 CLIP 層數，影響理解風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：CLIP skip = 跳過 CLIP 層數，影響理解風格。",
+    "example": "Use CLIP skip when working with AI image generation.",
+    "exampleZh": "跳過 CLIP 層數，影響理解風格",
+    "options": [
+      "跳過 CLIP 層數，影響理解風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "ETA",
+    "meaning": "採樣相關參數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：ETA = 採樣相關參數。",
+    "example": "Use ETA when working with AI image generation.",
+    "exampleZh": "採樣相關參數",
+    "options": [
+      "採樣相關參數",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "tiling",
+    "meaning": "無縫拼貼",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：tiling = 無縫拼貼。",
+    "example": "Use tiling when working with AI image generation.",
+    "exampleZh": "無縫拼貼",
+    "options": [
+      "無縫拼貼",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "restore faces",
+    "meaning": "臉部修復",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：restore faces = 臉部修復。",
+    "example": "Use restore faces when working with AI image generation.",
+    "exampleZh": "臉部修復",
+    "options": [
+      "臉部修復",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "variation strength",
+    "meaning": "變化強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：variation strength = 變化強度。",
+    "example": "Use variation strength when working with AI image generation.",
+    "exampleZh": "變化強度",
+    "options": [
+      "變化強度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "subseed",
+    "meaning": "副種子；混合變化用",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：subseed = 副種子；混合變化用。",
+    "example": "Use subseed when working with AI image generation.",
+    "exampleZh": "副種子；混合變化用",
+    "options": [
+      "副種子；混合變化用",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "interpolation",
+    "meaning": "插值；在兩個結果之間過渡",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：interpolation = 插值；在兩個結果之間過渡。",
+    "example": "Use interpolation when working with AI image generation.",
+    "exampleZh": "插值；在兩個結果之間過渡",
+    "options": [
+      "插值；在兩個結果之間過渡",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "highres steps",
+    "meaning": "高解析修復步數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：highres steps = 高解析修復步數。",
+    "example": "Use highres steps when working with AI image generation.",
+    "exampleZh": "高解析修復步數",
+    "options": [
+      "高解析修復步數",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "upscale factor",
+    "meaning": "放大倍率",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：upscale factor = 放大倍率。",
+    "example": "Use upscale factor when working with AI image generation.",
+    "exampleZh": "放大倍率",
+    "options": [
+      "放大倍率",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "tile size",
+    "meaning": "分塊大小",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：tile size = 分塊大小。",
+    "example": "Use tile size when working with AI image generation.",
+    "exampleZh": "分塊大小",
+    "options": [
+      "分塊大小",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "VRAM",
+    "meaning": "顯示卡記憶體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：VRAM = 顯示卡記憶體。",
+    "example": "Use VRAM when working with AI image generation.",
+    "exampleZh": "顯示卡記憶體",
+    "options": [
+      "顯示卡記憶體",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "OOM",
+    "meaning": "記憶體不足錯誤",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "⚙️",
+    "memory": "AI 生圖詞彙：OOM = 記憶體不足錯誤。",
+    "example": "Use OOM when working with AI image generation.",
+    "exampleZh": "記憶體不足錯誤",
+    "options": [
+      "記憶體不足錯誤",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "text-to-image",
+    "meaning": "文生圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：text-to-image = 文生圖。",
+    "example": "Use text-to-image when working with AI image generation.",
+    "exampleZh": "文生圖",
+    "options": [
+      "文生圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "txt2img",
+    "meaning": "文生圖功能",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：txt2img = 文生圖功能。",
+    "example": "Use txt2img when working with AI image generation.",
+    "exampleZh": "文生圖功能",
+    "options": [
+      "文生圖功能",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "image-to-image",
+    "meaning": "圖生圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：image-to-image = 圖生圖。",
+    "example": "Use image-to-image when working with AI image generation.",
+    "exampleZh": "圖生圖",
+    "options": [
+      "圖生圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "img2img",
+    "meaning": "圖生圖功能",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：img2img = 圖生圖功能。",
+    "example": "Use img2img when working with AI image generation.",
+    "exampleZh": "圖生圖功能",
+    "options": [
+      "圖生圖功能",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "inpainting",
+    "meaning": "局部重繪；修圖某一塊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：inpainting = 局部重繪；修圖某一塊。",
+    "example": "Use inpainting when working with AI image generation.",
+    "exampleZh": "局部重繪；修圖某一塊",
+    "options": [
+      "局部重繪；修圖某一塊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "outpainting",
+    "meaning": "向外補圖；擴張畫面",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：outpainting = 向外補圖；擴張畫面。",
+    "example": "Use outpainting when working with AI image generation.",
+    "exampleZh": "向外補圖；擴張畫面",
+    "options": [
+      "向外補圖；擴張畫面",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Hires fix",
+    "meaning": "高解析修復；先小圖再放大精修",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：Hires fix = 高解析修復；先小圖再放大精修。",
+    "example": "Use Hires fix when working with AI image generation.",
+    "exampleZh": "高解析修復；先小圖再放大精修",
+    "options": [
+      "高解析修復；先小圖再放大精修",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "upscale",
+    "meaning": "放大圖片",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：upscale = 放大圖片。",
+    "example": "Use upscale when working with AI image generation.",
+    "exampleZh": "放大圖片",
+    "options": [
+      "放大圖片",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "upscaler",
+    "meaning": "放大器；放大模型或演算法",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：upscaler = 放大器；放大模型或演算法。",
+    "example": "Use upscaler when working with AI image generation.",
+    "exampleZh": "放大器；放大模型或演算法",
+    "options": [
+      "放大器；放大模型或演算法",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "latent upscale",
+    "meaning": "潛空間放大",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：latent upscale = 潛空間放大。",
+    "example": "Use latent upscale when working with AI image generation.",
+    "exampleZh": "潛空間放大",
+    "options": [
+      "潛空間放大",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "face restoration",
+    "meaning": "臉部修復",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：face restoration = 臉部修復。",
+    "example": "Use face restoration when working with AI image generation.",
+    "exampleZh": "臉部修復",
+    "options": [
+      "臉部修復",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "detailer",
+    "meaning": "細節修復工具",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：detailer = 細節修復工具。",
+    "example": "Use detailer when working with AI image generation.",
+    "exampleZh": "細節修復工具",
+    "options": [
+      "細節修復工具",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "ADetailer",
+    "meaning": "自動偵測臉、手等細節重繪工具",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：ADetailer = 自動偵測臉、手等細節重繪工具。",
+    "example": "Use ADetailer when working with AI image generation.",
+    "exampleZh": "自動偵測臉、手等細節重繪工具",
+    "options": [
+      "自動偵測臉、手等細節重繪工具",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "mask",
+    "meaning": "遮罩；指定修改區域",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：mask = 遮罩；指定修改區域。",
+    "example": "Use mask when working with AI image generation.",
+    "exampleZh": "遮罩；指定修改區域",
+    "options": [
+      "遮罩；指定修改區域",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "masked area",
+    "meaning": "被遮罩的區域",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：masked area = 被遮罩的區域。",
+    "example": "Use masked area when working with AI image generation.",
+    "exampleZh": "被遮罩的區域",
+    "options": [
+      "被遮罩的區域",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "unmasked area",
+    "meaning": "未遮罩的區域",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：unmasked area = 未遮罩的區域。",
+    "example": "Use unmasked area when working with AI image generation.",
+    "exampleZh": "未遮罩的區域",
+    "options": [
+      "未遮罩的區域",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "resize",
+    "meaning": "調整大小",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：resize = 調整大小。",
+    "example": "Use resize when working with AI image generation.",
+    "exampleZh": "調整大小",
+    "options": [
+      "調整大小",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "crop",
+    "meaning": "裁切",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：crop = 裁切。",
+    "example": "Use crop when working with AI image generation.",
+    "exampleZh": "裁切",
+    "options": [
+      "裁切",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "crop and resize",
+    "meaning": "裁切並縮放",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：crop and resize = 裁切並縮放。",
+    "example": "Use crop and resize when working with AI image generation.",
+    "exampleZh": "裁切並縮放",
+    "options": [
+      "裁切並縮放",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fill",
+    "meaning": "填補",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：fill = 填補。",
+    "example": "Use fill when working with AI image generation.",
+    "exampleZh": "填補",
+    "options": [
+      "填補",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "original",
+    "meaning": "原圖模式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：original = 原圖模式。",
+    "example": "Use original when working with AI image generation.",
+    "exampleZh": "原圖模式",
+    "options": [
+      "原圖模式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "sketch",
+    "meaning": "草圖模式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：sketch = 草圖模式。",
+    "example": "Use sketch when working with AI image generation.",
+    "exampleZh": "草圖模式",
+    "options": [
+      "草圖模式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "color sketch",
+    "meaning": "彩色草圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：color sketch = 彩色草圖。",
+    "example": "Use color sketch when working with AI image generation.",
+    "exampleZh": "彩色草圖",
+    "options": [
+      "彩色草圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "interrogate",
+    "meaning": "反推提示詞；從圖猜提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：interrogate = 反推提示詞；從圖猜提示詞。",
+    "example": "Use interrogate when working with AI image generation.",
+    "exampleZh": "反推提示詞；從圖猜提示詞",
+    "options": [
+      "反推提示詞；從圖猜提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "PNG info",
+    "meaning": "讀取 PNG 內的生成資訊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：PNG info = 讀取 PNG 內的生成資訊。",
+    "example": "Use PNG info when working with AI image generation.",
+    "exampleZh": "讀取 PNG 內的生成資訊",
+    "options": [
+      "讀取 PNG 內的生成資訊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "post-processing",
+    "meaning": "後製處理",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：post-processing = 後製處理。",
+    "example": "Use post-processing when working with AI image generation.",
+    "exampleZh": "後製處理",
+    "options": [
+      "後製處理",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "checkpoint switch",
+    "meaning": "切換主模型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：checkpoint switch = 切換主模型。",
+    "example": "Use checkpoint switch when working with AI image generation.",
+    "exampleZh": "切換主模型",
+    "options": [
+      "切換主模型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "prompt history",
+    "meaning": "提示詞歷史",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🖼️",
+    "memory": "AI 生圖詞彙：prompt history = 提示詞歷史。",
+    "example": "Use prompt history when working with AI image generation.",
+    "exampleZh": "提示詞歷史",
+    "options": [
+      "提示詞歷史",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "ControlNet",
+    "meaning": "控制網；用姿勢、線稿、深度控制出圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：ControlNet = 控制網；用姿勢、線稿、深度控制出圖。",
+    "example": "Use ControlNet when working with AI image generation.",
+    "exampleZh": "控制網；用姿勢、線稿、深度控制出圖",
+    "options": [
+      "控制網；用姿勢、線稿、深度控制出圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "control weight",
+    "meaning": "控制權重",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：control weight = 控制權重。",
+    "example": "Use control weight when working with AI image generation.",
+    "exampleZh": "控制權重",
+    "options": [
+      "控制權重",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "control mode",
+    "meaning": "控制模式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：control mode = 控制模式。",
+    "example": "Use control mode when working with AI image generation.",
+    "exampleZh": "控制模式",
+    "options": [
+      "控制模式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "preprocessor",
+    "meaning": "前處理器；先把參考圖轉成控制圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：preprocessor = 前處理器；先把參考圖轉成控制圖。",
+    "example": "Use preprocessor when working with AI image generation.",
+    "exampleZh": "前處理器；先把參考圖轉成控制圖",
+    "options": [
+      "前處理器；先把參考圖轉成控制圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "OpenPose",
+    "meaning": "姿勢骨架控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：OpenPose = 姿勢骨架控制。",
+    "example": "Use OpenPose when working with AI image generation.",
+    "exampleZh": "姿勢骨架控制",
+    "options": [
+      "姿勢骨架控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "pose",
+    "meaning": "姿勢",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：pose = 姿勢。",
+    "example": "Use pose when working with AI image generation.",
+    "exampleZh": "姿勢",
+    "options": [
+      "姿勢",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "pose reference",
+    "meaning": "姿勢參考圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：pose reference = 姿勢參考圖。",
+    "example": "Use pose reference when working with AI image generation.",
+    "exampleZh": "姿勢參考圖",
+    "options": [
+      "姿勢參考圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "depth map",
+    "meaning": "深度圖；控制遠近空間",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：depth map = 深度圖；控制遠近空間。",
+    "example": "Use depth map when working with AI image generation.",
+    "exampleZh": "深度圖；控制遠近空間",
+    "options": [
+      "深度圖；控制遠近空間",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Canny edge",
+    "meaning": "邊緣線控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：Canny edge = 邊緣線控制。",
+    "example": "Use Canny edge when working with AI image generation.",
+    "exampleZh": "邊緣線控制",
+    "options": [
+      "邊緣線控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "lineart",
+    "meaning": "線稿控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：lineart = 線稿控制。",
+    "example": "Use lineart when working with AI image generation.",
+    "exampleZh": "線稿控制",
+    "options": [
+      "線稿控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "scribble",
+    "meaning": "塗鴉控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：scribble = 塗鴉控制。",
+    "example": "Use scribble when working with AI image generation.",
+    "exampleZh": "塗鴉控制",
+    "options": [
+      "塗鴉控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "segmentation",
+    "meaning": "區塊分割控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：segmentation = 區塊分割控制。",
+    "example": "Use segmentation when working with AI image generation.",
+    "exampleZh": "區塊分割控制",
+    "options": [
+      "區塊分割控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "normal map",
+    "meaning": "法線圖；控制表面方向",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：normal map = 法線圖；控制表面方向。",
+    "example": "Use normal map when working with AI image generation.",
+    "exampleZh": "法線圖；控制表面方向",
+    "options": [
+      "法線圖；控制表面方向",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "tile control",
+    "meaning": "分塊細節控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：tile control = 分塊細節控制。",
+    "example": "Use tile control when working with AI image generation.",
+    "exampleZh": "分塊細節控制",
+    "options": [
+      "分塊細節控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "IP-Adapter",
+    "meaning": "用參考圖影響角色或風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：IP-Adapter = 用參考圖影響角色或風格。",
+    "example": "Use IP-Adapter when working with AI image generation.",
+    "exampleZh": "用參考圖影響角色或風格",
+    "options": [
+      "用參考圖影響角色或風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "reference image",
+    "meaning": "參考圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：reference image = 參考圖。",
+    "example": "Use reference image when working with AI image generation.",
+    "exampleZh": "參考圖",
+    "options": [
+      "參考圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "image prompt",
+    "meaning": "圖片提示；用圖當提示",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：image prompt = 圖片提示；用圖當提示。",
+    "example": "Use image prompt when working with AI image generation.",
+    "exampleZh": "圖片提示；用圖當提示",
+    "options": [
+      "圖片提示；用圖當提示",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "style reference",
+    "meaning": "風格參考",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：style reference = 風格參考。",
+    "example": "Use style reference when working with AI image generation.",
+    "exampleZh": "風格參考",
+    "options": [
+      "風格參考",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "character reference",
+    "meaning": "角色參考",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：character reference = 角色參考。",
+    "example": "Use character reference when working with AI image generation.",
+    "exampleZh": "角色參考",
+    "options": [
+      "角色參考",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "face reference",
+    "meaning": "臉部參考",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：face reference = 臉部參考。",
+    "example": "Use face reference when working with AI image generation.",
+    "exampleZh": "臉部參考",
+    "options": [
+      "臉部參考",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "composition reference",
+    "meaning": "構圖參考",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：composition reference = 構圖參考。",
+    "example": "Use composition reference when working with AI image generation.",
+    "exampleZh": "構圖參考",
+    "options": [
+      "構圖參考",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "strength",
+    "meaning": "強度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：strength = 強度。",
+    "example": "Use strength when working with AI image generation.",
+    "exampleZh": "強度",
+    "options": [
+      "強度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "guidance",
+    "meaning": "引導",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：guidance = 引導。",
+    "example": "Use guidance when working with AI image generation.",
+    "exampleZh": "引導",
+    "options": [
+      "引導",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "conditioning",
+    "meaning": "條件控制",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：conditioning = 條件控制。",
+    "example": "Use conditioning when working with AI image generation.",
+    "exampleZh": "條件控制",
+    "options": [
+      "條件控制",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "mask blur",
+    "meaning": "遮罩邊緣模糊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：mask blur = 遮罩邊緣模糊。",
+    "example": "Use mask blur when working with AI image generation.",
+    "exampleZh": "遮罩邊緣模糊",
+    "options": [
+      "遮罩邊緣模糊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "inpaint area",
+    "meaning": "重繪範圍",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：inpaint area = 重繪範圍。",
+    "example": "Use inpaint area when working with AI image generation.",
+    "exampleZh": "重繪範圍",
+    "options": [
+      "重繪範圍",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "only masked",
+    "meaning": "只改遮罩區",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：only masked = 只改遮罩區。",
+    "example": "Use only masked when working with AI image generation.",
+    "exampleZh": "只改遮罩區",
+    "options": [
+      "只改遮罩區",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "whole picture",
+    "meaning": "整張圖參與重繪",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🕹️",
+    "memory": "AI 生圖詞彙：whole picture = 整張圖參與重繪。",
+    "example": "Use whole picture when working with AI image generation.",
+    "exampleZh": "整張圖參與重繪",
+    "options": [
+      "整張圖參與重繪",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "composition",
+    "meaning": "構圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：composition = 構圖。",
+    "example": "Use composition when working with AI image generation.",
+    "exampleZh": "構圖",
+    "options": [
+      "構圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "framing",
+    "meaning": "取景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：framing = 取景。",
+    "example": "Use framing when working with AI image generation.",
+    "exampleZh": "取景",
+    "options": [
+      "取景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "rule of thirds",
+    "meaning": "三分法構圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：rule of thirds = 三分法構圖。",
+    "example": "Use rule of thirds when working with AI image generation.",
+    "exampleZh": "三分法構圖",
+    "options": [
+      "三分法構圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "centered composition",
+    "meaning": "置中構圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：centered composition = 置中構圖。",
+    "example": "Use centered composition when working with AI image generation.",
+    "exampleZh": "置中構圖",
+    "options": [
+      "置中構圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "symmetry",
+    "meaning": "對稱",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：symmetry = 對稱。",
+    "example": "Use symmetry when working with AI image generation.",
+    "exampleZh": "對稱",
+    "options": [
+      "對稱",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "foreground",
+    "meaning": "前景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：foreground = 前景。",
+    "example": "Use foreground when working with AI image generation.",
+    "exampleZh": "前景",
+    "options": [
+      "前景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "midground",
+    "meaning": "中景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：midground = 中景。",
+    "example": "Use midground when working with AI image generation.",
+    "exampleZh": "中景",
+    "options": [
+      "中景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "background",
+    "meaning": "背景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：background = 背景。",
+    "example": "Use background when working with AI image generation.",
+    "exampleZh": "背景",
+    "options": [
+      "背景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "depth of field",
+    "meaning": "景深",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：depth of field = 景深。",
+    "example": "Use depth of field when working with AI image generation.",
+    "exampleZh": "景深",
+    "options": [
+      "景深",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "bokeh",
+    "meaning": "散景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：bokeh = 散景。",
+    "example": "Use bokeh when working with AI image generation.",
+    "exampleZh": "散景",
+    "options": [
+      "散景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "close-up",
+    "meaning": "特寫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：close-up = 特寫。",
+    "example": "Use close-up when working with AI image generation.",
+    "exampleZh": "特寫",
+    "options": [
+      "特寫",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "extreme close-up",
+    "meaning": "超近特寫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：extreme close-up = 超近特寫。",
+    "example": "Use extreme close-up when working with AI image generation.",
+    "exampleZh": "超近特寫",
+    "options": [
+      "超近特寫",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "medium shot",
+    "meaning": "中景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：medium shot = 中景。",
+    "example": "Use medium shot when working with AI image generation.",
+    "exampleZh": "中景",
+    "options": [
+      "中景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "full body",
+    "meaning": "全身",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：full body = 全身。",
+    "example": "Use full body when working with AI image generation.",
+    "exampleZh": "全身",
+    "options": [
+      "全身",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "upper body",
+    "meaning": "上半身",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：upper body = 上半身。",
+    "example": "Use upper body when working with AI image generation.",
+    "exampleZh": "上半身",
+    "options": [
+      "上半身",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "portrait",
+    "meaning": "人像直幅",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：portrait = 人像直幅。",
+    "example": "Use portrait when working with AI image generation.",
+    "exampleZh": "人像直幅",
+    "options": [
+      "人像直幅",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "landscape",
+    "meaning": "橫幅風景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：landscape = 橫幅風景。",
+    "example": "Use landscape when working with AI image generation.",
+    "exampleZh": "橫幅風景",
+    "options": [
+      "橫幅風景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "wide shot",
+    "meaning": "廣角遠景",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：wide shot = 廣角遠景。",
+    "example": "Use wide shot when working with AI image generation.",
+    "exampleZh": "廣角遠景",
+    "options": [
+      "廣角遠景",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "low angle",
+    "meaning": "低角度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：low angle = 低角度。",
+    "example": "Use low angle when working with AI image generation.",
+    "exampleZh": "低角度",
+    "options": [
+      "低角度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "high angle",
+    "meaning": "高角度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：high angle = 高角度。",
+    "example": "Use high angle when working with AI image generation.",
+    "exampleZh": "高角度",
+    "options": [
+      "高角度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "bird’s-eye view",
+    "meaning": "俯視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：bird’s-eye view = 俯視角。",
+    "example": "Use bird’s-eye view when working with AI image generation.",
+    "exampleZh": "俯視角",
+    "options": [
+      "俯視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "worm’s-eye view",
+    "meaning": "仰視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：worm’s-eye view = 仰視角。",
+    "example": "Use worm’s-eye view when working with AI image generation.",
+    "exampleZh": "仰視角",
+    "options": [
+      "仰視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "side view",
+    "meaning": "側面視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：side view = 側面視角。",
+    "example": "Use side view when working with AI image generation.",
+    "exampleZh": "側面視角",
+    "options": [
+      "側面視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "front view",
+    "meaning": "正面視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：front view = 正面視角。",
+    "example": "Use front view when working with AI image generation.",
+    "exampleZh": "正面視角",
+    "options": [
+      "正面視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "back view",
+    "meaning": "背面視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：back view = 背面視角。",
+    "example": "Use back view when working with AI image generation.",
+    "exampleZh": "背面視角",
+    "options": [
+      "背面視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "three-quarter view",
+    "meaning": "四分之三視角",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：three-quarter view = 四分之三視角。",
+    "example": "Use three-quarter view when working with AI image generation.",
+    "exampleZh": "四分之三視角",
+    "options": [
+      "四分之三視角",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "camera angle",
+    "meaning": "鏡頭角度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：camera angle = 鏡頭角度。",
+    "example": "Use camera angle when working with AI image generation.",
+    "exampleZh": "鏡頭角度",
+    "options": [
+      "鏡頭角度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "focal length",
+    "meaning": "焦距",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：focal length = 焦距。",
+    "example": "Use focal length when working with AI image generation.",
+    "exampleZh": "焦距",
+    "options": [
+      "焦距",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "wide-angle lens",
+    "meaning": "廣角鏡頭",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：wide-angle lens = 廣角鏡頭。",
+    "example": "Use wide-angle lens when working with AI image generation.",
+    "exampleZh": "廣角鏡頭",
+    "options": [
+      "廣角鏡頭",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "telephoto lens",
+    "meaning": "望遠鏡頭",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：telephoto lens = 望遠鏡頭。",
+    "example": "Use telephoto lens when working with AI image generation.",
+    "exampleZh": "望遠鏡頭",
+    "options": [
+      "望遠鏡頭",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "macro lens",
+    "meaning": "微距鏡頭",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：macro lens = 微距鏡頭。",
+    "example": "Use macro lens when working with AI image generation.",
+    "exampleZh": "微距鏡頭",
+    "options": [
+      "微距鏡頭",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cinematic shot",
+    "meaning": "電影感鏡頭",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "📸",
+    "memory": "AI 生圖詞彙：cinematic shot = 電影感鏡頭。",
+    "example": "Use cinematic shot when working with AI image generation.",
+    "exampleZh": "電影感鏡頭",
+    "options": [
+      "電影感鏡頭",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "lighting",
+    "meaning": "光線",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：lighting = 光線。",
+    "example": "Use lighting when working with AI image generation.",
+    "exampleZh": "光線",
+    "options": [
+      "光線",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "soft lighting",
+    "meaning": "柔光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：soft lighting = 柔光。",
+    "example": "Use soft lighting when working with AI image generation.",
+    "exampleZh": "柔光",
+    "options": [
+      "柔光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hard lighting",
+    "meaning": "硬光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：hard lighting = 硬光。",
+    "example": "Use hard lighting when working with AI image generation.",
+    "exampleZh": "硬光",
+    "options": [
+      "硬光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "backlight",
+    "meaning": "背光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：backlight = 背光。",
+    "example": "Use backlight when working with AI image generation.",
+    "exampleZh": "背光",
+    "options": [
+      "背光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "rim light",
+    "meaning": "輪廓光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：rim light = 輪廓光。",
+    "example": "Use rim light when working with AI image generation.",
+    "exampleZh": "輪廓光",
+    "options": [
+      "輪廓光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "side lighting",
+    "meaning": "側光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：side lighting = 側光。",
+    "example": "Use side lighting when working with AI image generation.",
+    "exampleZh": "側光",
+    "options": [
+      "側光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "studio lighting",
+    "meaning": "棚拍燈光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：studio lighting = 棚拍燈光。",
+    "example": "Use studio lighting when working with AI image generation.",
+    "exampleZh": "棚拍燈光",
+    "options": [
+      "棚拍燈光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "natural light",
+    "meaning": "自然光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：natural light = 自然光。",
+    "example": "Use natural light when working with AI image generation.",
+    "exampleZh": "自然光",
+    "options": [
+      "自然光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "golden hour",
+    "meaning": "黃金時刻光線",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：golden hour = 黃金時刻光線。",
+    "example": "Use golden hour when working with AI image generation.",
+    "exampleZh": "黃金時刻光線",
+    "options": [
+      "黃金時刻光線",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "volumetric lighting",
+    "meaning": "體積光",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：volumetric lighting = 體積光。",
+    "example": "Use volumetric lighting when working with AI image generation.",
+    "exampleZh": "體積光",
+    "options": [
+      "體積光",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "dramatic lighting",
+    "meaning": "戲劇化光線",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：dramatic lighting = 戲劇化光線。",
+    "example": "Use dramatic lighting when working with AI image generation.",
+    "exampleZh": "戲劇化光線",
+    "options": [
+      "戲劇化光線",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cinematic lighting",
+    "meaning": "電影感光線",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：cinematic lighting = 電影感光線。",
+    "example": "Use cinematic lighting when working with AI image generation.",
+    "exampleZh": "電影感光線",
+    "options": [
+      "電影感光線",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "color grading",
+    "meaning": "調色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：color grading = 調色。",
+    "example": "Use color grading when working with AI image generation.",
+    "exampleZh": "調色",
+    "options": [
+      "調色",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "warm tone",
+    "meaning": "暖色調",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：warm tone = 暖色調。",
+    "example": "Use warm tone when working with AI image generation.",
+    "exampleZh": "暖色調",
+    "options": [
+      "暖色調",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cool tone",
+    "meaning": "冷色調",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：cool tone = 冷色調。",
+    "example": "Use cool tone when working with AI image generation.",
+    "exampleZh": "冷色調",
+    "options": [
+      "冷色調",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "contrast",
+    "meaning": "對比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：contrast = 對比。",
+    "example": "Use contrast when working with AI image generation.",
+    "exampleZh": "對比",
+    "options": [
+      "對比",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "high contrast",
+    "meaning": "高對比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：high contrast = 高對比。",
+    "example": "Use high contrast when working with AI image generation.",
+    "exampleZh": "高對比",
+    "options": [
+      "高對比",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "low contrast",
+    "meaning": "低對比",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：low contrast = 低對比。",
+    "example": "Use low contrast when working with AI image generation.",
+    "exampleZh": "低對比",
+    "options": [
+      "低對比",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "saturation",
+    "meaning": "飽和度",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：saturation = 飽和度。",
+    "example": "Use saturation when working with AI image generation.",
+    "exampleZh": "飽和度",
+    "options": [
+      "飽和度",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "vibrant colors",
+    "meaning": "鮮豔色彩",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：vibrant colors = 鮮豔色彩。",
+    "example": "Use vibrant colors when working with AI image generation.",
+    "exampleZh": "鮮豔色彩",
+    "options": [
+      "鮮豔色彩",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "monochrome",
+    "meaning": "單色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：monochrome = 單色。",
+    "example": "Use monochrome when working with AI image generation.",
+    "exampleZh": "單色",
+    "options": [
+      "單色",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "black and white",
+    "meaning": "黑白",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：black and white = 黑白。",
+    "example": "Use black and white when working with AI image generation.",
+    "exampleZh": "黑白",
+    "options": [
+      "黑白",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "photorealistic",
+    "meaning": "照片寫實",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：photorealistic = 照片寫實。",
+    "example": "Use photorealistic when working with AI image generation.",
+    "exampleZh": "照片寫實",
+    "options": [
+      "照片寫實",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "realistic",
+    "meaning": "寫實",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：realistic = 寫實。",
+    "example": "Use realistic when working with AI image generation.",
+    "exampleZh": "寫實",
+    "options": [
+      "寫實",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "anime style",
+    "meaning": "動漫風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：anime style = 動漫風格。",
+    "example": "Use anime style when working with AI image generation.",
+    "exampleZh": "動漫風格",
+    "options": [
+      "動漫風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "manga style",
+    "meaning": "漫畫風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：manga style = 漫畫風格。",
+    "example": "Use manga style when working with AI image generation.",
+    "exampleZh": "漫畫風格",
+    "options": [
+      "漫畫風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "3D render",
+    "meaning": "3D 渲染",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：3D render = 3D 渲染。",
+    "example": "Use 3D render when working with AI image generation.",
+    "exampleZh": "3D 渲染",
+    "options": [
+      "3D 渲染",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "CGI",
+    "meaning": "電腦動畫感",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：CGI = 電腦動畫感。",
+    "example": "Use CGI when working with AI image generation.",
+    "exampleZh": "電腦動畫感",
+    "options": [
+      "電腦動畫感",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "oil painting",
+    "meaning": "油畫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：oil painting = 油畫。",
+    "example": "Use oil painting when working with AI image generation.",
+    "exampleZh": "油畫",
+    "options": [
+      "油畫",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "watercolor",
+    "meaning": "水彩",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：watercolor = 水彩。",
+    "example": "Use watercolor when working with AI image generation.",
+    "exampleZh": "水彩",
+    "options": [
+      "水彩",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "sketch style",
+    "meaning": "素描風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：sketch style = 素描風格。",
+    "example": "Use sketch style when working with AI image generation.",
+    "exampleZh": "素描風格",
+    "options": [
+      "素描風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "pixel art",
+    "meaning": "像素風",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：pixel art = 像素風。",
+    "example": "Use pixel art when working with AI image generation.",
+    "exampleZh": "像素風",
+    "options": [
+      "像素風",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cyberpunk",
+    "meaning": "賽博龐克",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：cyberpunk = 賽博龐克。",
+    "example": "Use cyberpunk when working with AI image generation.",
+    "exampleZh": "賽博龐克",
+    "options": [
+      "賽博龐克",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fantasy art",
+    "meaning": "奇幻風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：fantasy art = 奇幻風格。",
+    "example": "Use fantasy art when working with AI image generation.",
+    "exampleZh": "奇幻風格",
+    "options": [
+      "奇幻風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "minimalist",
+    "meaning": "極簡風格",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "💡",
+    "memory": "AI 生圖詞彙：minimalist = 極簡風格。",
+    "example": "Use minimalist when working with AI image generation.",
+    "exampleZh": "極簡風格",
+    "options": [
+      "極簡風格",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "character",
+    "meaning": "角色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：character = 角色。",
+    "example": "Use character when working with AI image generation.",
+    "exampleZh": "角色",
+    "options": [
+      "角色",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "subject",
+    "meaning": "主體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：subject = 主體。",
+    "example": "Use subject when working with AI image generation.",
+    "exampleZh": "主體",
+    "options": [
+      "主體",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "face",
+    "meaning": "臉",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：face = 臉。",
+    "example": "Use face when working with AI image generation.",
+    "exampleZh": "臉",
+    "options": [
+      "臉",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "eyes",
+    "meaning": "眼睛",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：eyes = 眼睛。",
+    "example": "Use eyes when working with AI image generation.",
+    "exampleZh": "眼睛",
+    "options": [
+      "眼睛",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hair",
+    "meaning": "頭髮",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：hair = 頭髮。",
+    "example": "Use hair when working with AI image generation.",
+    "exampleZh": "頭髮",
+    "options": [
+      "頭髮",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hairstyle",
+    "meaning": "髮型",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：hairstyle = 髮型。",
+    "example": "Use hairstyle when working with AI image generation.",
+    "exampleZh": "髮型",
+    "options": [
+      "髮型",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "bangs",
+    "meaning": "瀏海",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：bangs = 瀏海。",
+    "example": "Use bangs when working with AI image generation.",
+    "exampleZh": "瀏海",
+    "options": [
+      "瀏海",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "skin",
+    "meaning": "皮膚",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：skin = 皮膚。",
+    "example": "Use skin when working with AI image generation.",
+    "exampleZh": "皮膚",
+    "options": [
+      "皮膚",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "skin texture",
+    "meaning": "皮膚紋理",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：skin texture = 皮膚紋理。",
+    "example": "Use skin texture when working with AI image generation.",
+    "exampleZh": "皮膚紋理",
+    "options": [
+      "皮膚紋理",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "expression",
+    "meaning": "表情",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：expression = 表情。",
+    "example": "Use expression when working with AI image generation.",
+    "exampleZh": "表情",
+    "options": [
+      "表情",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "smile",
+    "meaning": "微笑",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：smile = 微笑。",
+    "example": "Use smile when working with AI image generation.",
+    "exampleZh": "微笑",
+    "options": [
+      "微笑",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "serious expression",
+    "meaning": "嚴肅表情",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：serious expression = 嚴肅表情。",
+    "example": "Use serious expression when working with AI image generation.",
+    "exampleZh": "嚴肅表情",
+    "options": [
+      "嚴肅表情",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "looking at viewer",
+    "meaning": "看向觀眾",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：looking at viewer = 看向觀眾。",
+    "example": "Use looking at viewer when working with AI image generation.",
+    "exampleZh": "看向觀眾",
+    "options": [
+      "看向觀眾",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "looking away",
+    "meaning": "看向別處",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：looking away = 看向別處。",
+    "example": "Use looking away when working with AI image generation.",
+    "exampleZh": "看向別處",
+    "options": [
+      "看向別處",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "side profile",
+    "meaning": "側臉",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：side profile = 側臉。",
+    "example": "Use side profile when working with AI image generation.",
+    "exampleZh": "側臉",
+    "options": [
+      "側臉",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "head tilt",
+    "meaning": "歪頭",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：head tilt = 歪頭。",
+    "example": "Use head tilt when working with AI image generation.",
+    "exampleZh": "歪頭",
+    "options": [
+      "歪頭",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "makeup",
+    "meaning": "妝容",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：makeup = 妝容。",
+    "example": "Use makeup when working with AI image generation.",
+    "exampleZh": "妝容",
+    "options": [
+      "妝容",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "outfit",
+    "meaning": "服裝",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：outfit = 服裝。",
+    "example": "Use outfit when working with AI image generation.",
+    "exampleZh": "服裝",
+    "options": [
+      "服裝",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "dress",
+    "meaning": "洋裝",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：dress = 洋裝。",
+    "example": "Use dress when working with AI image generation.",
+    "exampleZh": "洋裝",
+    "options": [
+      "洋裝",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "jacket",
+    "meaning": "外套",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：jacket = 外套。",
+    "example": "Use jacket when working with AI image generation.",
+    "exampleZh": "外套",
+    "options": [
+      "外套",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "uniform",
+    "meaning": "制服",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：uniform = 制服。",
+    "example": "Use uniform when working with AI image generation.",
+    "exampleZh": "制服",
+    "options": [
+      "制服",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "armor",
+    "meaning": "盔甲",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：armor = 盔甲。",
+    "example": "Use armor when working with AI image generation.",
+    "exampleZh": "盔甲",
+    "options": [
+      "盔甲",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "accessories",
+    "meaning": "配件",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：accessories = 配件。",
+    "example": "Use accessories when working with AI image generation.",
+    "exampleZh": "配件",
+    "options": [
+      "配件",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "glasses",
+    "meaning": "眼鏡",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：glasses = 眼鏡。",
+    "example": "Use glasses when working with AI image generation.",
+    "exampleZh": "眼鏡",
+    "options": [
+      "眼鏡",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hands",
+    "meaning": "手",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：hands = 手。",
+    "example": "Use hands when working with AI image generation.",
+    "exampleZh": "手",
+    "options": [
+      "手",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "hand pose",
+    "meaning": "手部姿勢",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：hand pose = 手部姿勢。",
+    "example": "Use hand pose when working with AI image generation.",
+    "exampleZh": "手部姿勢",
+    "options": [
+      "手部姿勢",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "standing",
+    "meaning": "站著",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：standing = 站著。",
+    "example": "Use standing when working with AI image generation.",
+    "exampleZh": "站著",
+    "options": [
+      "站著",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "sitting",
+    "meaning": "坐著",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：sitting = 坐著。",
+    "example": "Use sitting when working with AI image generation.",
+    "exampleZh": "坐著",
+    "options": [
+      "坐著",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "walking",
+    "meaning": "走路",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：walking = 走路。",
+    "example": "Use walking when working with AI image generation.",
+    "exampleZh": "走路",
+    "options": [
+      "走路",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "dynamic pose",
+    "meaning": "動態姿勢",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：dynamic pose = 動態姿勢。",
+    "example": "Use dynamic pose when working with AI image generation.",
+    "exampleZh": "動態姿勢",
+    "options": [
+      "動態姿勢",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "original character",
+    "meaning": "原創角色",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：original character = 原創角色。",
+    "example": "Use original character when working with AI image generation.",
+    "exampleZh": "原創角色",
+    "options": [
+      "原創角色",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "character sheet",
+    "meaning": "角色設定圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🙂",
+    "memory": "AI 生圖詞彙：character sheet = 角色設定圖。",
+    "example": "Use character sheet when working with AI image generation.",
+    "exampleZh": "角色設定圖",
+    "options": [
+      "角色設定圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "bad anatomy",
+    "meaning": "錯誤人體結構",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：bad anatomy = 錯誤人體結構。",
+    "example": "Use bad anatomy when working with AI image generation.",
+    "exampleZh": "錯誤人體結構",
+    "options": [
+      "錯誤人體結構",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "bad hands",
+    "meaning": "手畫壞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：bad hands = 手畫壞。",
+    "example": "Use bad hands when working with AI image generation.",
+    "exampleZh": "手畫壞",
+    "options": [
+      "手畫壞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "extra fingers",
+    "meaning": "多手指",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：extra fingers = 多手指。",
+    "example": "Use extra fingers when working with AI image generation.",
+    "exampleZh": "多手指",
+    "options": [
+      "多手指",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "missing fingers",
+    "meaning": "少手指",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：missing fingers = 少手指。",
+    "example": "Use missing fingers when working with AI image generation.",
+    "exampleZh": "少手指",
+    "options": [
+      "少手指",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fused fingers",
+    "meaning": "手指黏在一起",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：fused fingers = 手指黏在一起。",
+    "example": "Use fused fingers when working with AI image generation.",
+    "exampleZh": "手指黏在一起",
+    "options": [
+      "手指黏在一起",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "deformed",
+    "meaning": "變形",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：deformed = 變形。",
+    "example": "Use deformed when working with AI image generation.",
+    "exampleZh": "變形",
+    "options": [
+      "變形",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "mutated",
+    "meaning": "突變畸形",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：mutated = 突變畸形。",
+    "example": "Use mutated when working with AI image generation.",
+    "exampleZh": "突變畸形",
+    "options": [
+      "突變畸形",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "duplicate",
+    "meaning": "重複人物或物件",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：duplicate = 重複人物或物件。",
+    "example": "Use duplicate when working with AI image generation.",
+    "exampleZh": "重複人物或物件",
+    "options": [
+      "重複人物或物件",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "blurry",
+    "meaning": "模糊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：blurry = 模糊。",
+    "example": "Use blurry when working with AI image generation.",
+    "exampleZh": "模糊",
+    "options": [
+      "模糊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "out of focus",
+    "meaning": "失焦",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：out of focus = 失焦。",
+    "example": "Use out of focus when working with AI image generation.",
+    "exampleZh": "失焦",
+    "options": [
+      "失焦",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "low quality",
+    "meaning": "低品質",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：low quality = 低品質。",
+    "example": "Use low quality when working with AI image generation.",
+    "exampleZh": "低品質",
+    "options": [
+      "低品質",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "worst quality",
+    "meaning": "最差品質",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：worst quality = 最差品質。",
+    "example": "Use worst quality when working with AI image generation.",
+    "exampleZh": "最差品質",
+    "options": [
+      "最差品質",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "jpeg artifacts",
+    "meaning": "JPEG 壓縮雜訊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：jpeg artifacts = JPEG 壓縮雜訊。",
+    "example": "Use jpeg artifacts when working with AI image generation.",
+    "exampleZh": "JPEG 壓縮雜訊",
+    "options": [
+      "JPEG 壓縮雜訊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "noise artifacts",
+    "meaning": "雜訊瑕疵",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：noise artifacts = 雜訊瑕疵。",
+    "example": "Use noise artifacts when working with AI image generation.",
+    "exampleZh": "雜訊瑕疵",
+    "options": [
+      "雜訊瑕疵",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "watermark",
+    "meaning": "浮水印",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：watermark = 浮水印。",
+    "example": "Use watermark when working with AI image generation.",
+    "exampleZh": "浮水印",
+    "options": [
+      "浮水印",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "signature",
+    "meaning": "簽名",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：signature = 簽名。",
+    "example": "Use signature when working with AI image generation.",
+    "exampleZh": "簽名",
+    "options": [
+      "簽名",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "text",
+    "meaning": "文字",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：text = 文字。",
+    "example": "Use text when working with AI image generation.",
+    "exampleZh": "文字",
+    "options": [
+      "文字",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "logo",
+    "meaning": "商標",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：logo = 商標。",
+    "example": "Use logo when working with AI image generation.",
+    "exampleZh": "商標",
+    "options": [
+      "商標",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cropped",
+    "meaning": "被裁切",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：cropped = 被裁切。",
+    "example": "Use cropped when working with AI image generation.",
+    "exampleZh": "被裁切",
+    "options": [
+      "被裁切",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "out of frame",
+    "meaning": "超出畫面",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：out of frame = 超出畫面。",
+    "example": "Use out of frame when working with AI image generation.",
+    "exampleZh": "超出畫面",
+    "options": [
+      "超出畫面",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "overexposed",
+    "meaning": "過曝",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：overexposed = 過曝。",
+    "example": "Use overexposed when working with AI image generation.",
+    "exampleZh": "過曝",
+    "options": [
+      "過曝",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "underexposed",
+    "meaning": "曝光不足",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：underexposed = 曝光不足。",
+    "example": "Use underexposed when working with AI image generation.",
+    "exampleZh": "曝光不足",
+    "options": [
+      "曝光不足",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "color banding",
+    "meaning": "色帶",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：color banding = 色帶。",
+    "example": "Use color banding when working with AI image generation.",
+    "exampleZh": "色帶",
+    "options": [
+      "色帶",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "fix",
+    "meaning": "修正",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：fix = 修正。",
+    "example": "Use fix when working with AI image generation.",
+    "exampleZh": "修正",
+    "options": [
+      "修正",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "retouch",
+    "meaning": "修圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：retouch = 修圖。",
+    "example": "Use retouch when working with AI image generation.",
+    "exampleZh": "修圖",
+    "options": [
+      "修圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "cleanup",
+    "meaning": "清理瑕疵",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：cleanup = 清理瑕疵。",
+    "example": "Use cleanup when working with AI image generation.",
+    "exampleZh": "清理瑕疵",
+    "options": [
+      "清理瑕疵",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "redraw",
+    "meaning": "重畫",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：redraw = 重畫。",
+    "example": "Use redraw when working with AI image generation.",
+    "exampleZh": "重畫",
+    "options": [
+      "重畫",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "regenerate",
+    "meaning": "重新生成",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：regenerate = 重新生成。",
+    "example": "Use regenerate when working with AI image generation.",
+    "exampleZh": "重新生成",
+    "options": [
+      "重新生成",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "variation",
+    "meaning": "變體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：variation = 變體。",
+    "example": "Use variation when working with AI image generation.",
+    "exampleZh": "變體",
+    "options": [
+      "變體",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "artifact",
+    "meaning": "瑕疵；生成錯誤",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🧯",
+    "memory": "AI 生圖詞彙：artifact = 瑕疵；生成錯誤。",
+    "example": "Use artifact when working with AI image generation.",
+    "exampleZh": "瑕疵；生成錯誤",
+    "options": [
+      "瑕疵；生成錯誤",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "WebUI",
+    "meaning": "網頁介面；常指 Stable Diffusion WebUI",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：WebUI = 網頁介面；常指 Stable Diffusion WebUI。",
+    "example": "Use WebUI when working with AI image generation.",
+    "exampleZh": "網頁介面；常指 Stable Diffusion WebUI",
+    "options": [
+      "網頁介面；常指 Stable Diffusion WebUI",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "AUTOMATIC1111",
+    "meaning": "常見 Stable Diffusion WebUI 專案",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：AUTOMATIC1111 = 常見 Stable Diffusion WebUI 專案。",
+    "example": "Use AUTOMATIC1111 when working with AI image generation.",
+    "exampleZh": "常見 Stable Diffusion WebUI 專案",
+    "options": [
+      "常見 Stable Diffusion WebUI 專案",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Forge",
+    "meaning": "Stable Diffusion WebUI 分支之一",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：Forge = Stable Diffusion WebUI 分支之一。",
+    "example": "Use Forge when working with AI image generation.",
+    "exampleZh": "Stable Diffusion WebUI 分支之一",
+    "options": [
+      "Stable Diffusion WebUI 分支之一",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "ComfyUI",
+    "meaning": "節點式 AI 生圖軟體",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：ComfyUI = 節點式 AI 生圖軟體。",
+    "example": "Use ComfyUI when working with AI image generation.",
+    "exampleZh": "節點式 AI 生圖軟體",
+    "options": [
+      "節點式 AI 生圖軟體",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Fooocus",
+    "meaning": "簡化版 AI 生圖介面",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：Fooocus = 簡化版 AI 生圖介面。",
+    "example": "Use Fooocus when working with AI image generation.",
+    "exampleZh": "簡化版 AI 生圖介面",
+    "options": [
+      "簡化版 AI 生圖介面",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "node",
+    "meaning": "節點；ComfyUI 的功能方塊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：node = 節點；ComfyUI 的功能方塊。",
+    "example": "Use node when working with AI image generation.",
+    "exampleZh": "節點；ComfyUI 的功能方塊",
+    "options": [
+      "節點；ComfyUI 的功能方塊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "workflow",
+    "meaning": "工作流",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：workflow = 工作流。",
+    "example": "Use workflow when working with AI image generation.",
+    "exampleZh": "工作流",
+    "options": [
+      "工作流",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "graph",
+    "meaning": "節點圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：graph = 節點圖。",
+    "example": "Use graph when working with AI image generation.",
+    "exampleZh": "節點圖",
+    "options": [
+      "節點圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "queue prompt",
+    "meaning": "排隊執行提示詞",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：queue prompt = 排隊執行提示詞。",
+    "example": "Use queue prompt when working with AI image generation.",
+    "exampleZh": "排隊執行提示詞",
+    "options": [
+      "排隊執行提示詞",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "generate button",
+    "meaning": "生成按鈕",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：generate button = 生成按鈕。",
+    "example": "Use generate button when working with AI image generation.",
+    "exampleZh": "生成按鈕",
+    "options": [
+      "生成按鈕",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "progress bar",
+    "meaning": "進度條",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：progress bar = 進度條。",
+    "example": "Use progress bar when working with AI image generation.",
+    "exampleZh": "進度條",
+    "options": [
+      "進度條",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "output folder",
+    "meaning": "輸出資料夾",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：output folder = 輸出資料夾。",
+    "example": "Use output folder when working with AI image generation.",
+    "exampleZh": "輸出資料夾",
+    "options": [
+      "輸出資料夾",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "history",
+    "meaning": "歷史紀錄",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：history = 歷史紀錄。",
+    "example": "Use history when working with AI image generation.",
+    "exampleZh": "歷史紀錄",
+    "options": [
+      "歷史紀錄",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "extension",
+    "meaning": "擴充套件",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：extension = 擴充套件。",
+    "example": "Use extension when working with AI image generation.",
+    "exampleZh": "擴充套件",
+    "options": [
+      "擴充套件",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "plugin",
+    "meaning": "外掛",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：plugin = 外掛。",
+    "example": "Use plugin when working with AI image generation.",
+    "exampleZh": "外掛",
+    "options": [
+      "外掛",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "script",
+    "meaning": "腳本",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：script = 腳本。",
+    "example": "Use script when working with AI image generation.",
+    "exampleZh": "腳本",
+    "options": [
+      "腳本",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "settings",
+    "meaning": "設定",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：settings = 設定。",
+    "example": "Use settings when working with AI image generation.",
+    "exampleZh": "設定",
+    "options": [
+      "設定",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "parameters",
+    "meaning": "參數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：parameters = 參數。",
+    "example": "Use parameters when working with AI image generation.",
+    "exampleZh": "參數",
+    "options": [
+      "參數",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "metadata",
+    "meaning": "中繼資料；圖片內含生成資訊",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：metadata = 中繼資料；圖片內含生成資訊。",
+    "example": "Use metadata when working with AI image generation.",
+    "exampleZh": "中繼資料；圖片內含生成資訊",
+    "options": [
+      "中繼資料；圖片內含生成資訊",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "model browser",
+    "meaning": "模型瀏覽器",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：model browser = 模型瀏覽器。",
+    "example": "Use model browser when working with AI image generation.",
+    "exampleZh": "模型瀏覽器",
+    "options": [
+      "模型瀏覽器",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "LoRA browser",
+    "meaning": "LoRA 瀏覽器",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：LoRA browser = LoRA 瀏覽器。",
+    "example": "Use LoRA browser when working with AI image generation.",
+    "exampleZh": "LoRA 瀏覽器",
+    "options": [
+      "LoRA 瀏覽器",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "preview image",
+    "meaning": "預覽圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：preview image = 預覽圖。",
+    "example": "Use preview image when working with AI image generation.",
+    "exampleZh": "預覽圖",
+    "options": [
+      "預覽圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "thumbnail",
+    "meaning": "縮圖",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：thumbnail = 縮圖。",
+    "example": "Use thumbnail when working with AI image generation.",
+    "exampleZh": "縮圖",
+    "options": [
+      "縮圖",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "download",
+    "meaning": "下載",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：download = 下載。",
+    "example": "Use download when working with AI image generation.",
+    "exampleZh": "下載",
+    "options": [
+      "下載",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "install",
+    "meaning": "安裝",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：install = 安裝。",
+    "example": "Use install when working with AI image generation.",
+    "exampleZh": "安裝",
+    "options": [
+      "安裝",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "update",
+    "meaning": "更新",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：update = 更新。",
+    "example": "Use update when working with AI image generation.",
+    "exampleZh": "更新",
+    "options": [
+      "更新",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "dependency",
+    "meaning": "相依套件",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：dependency = 相依套件。",
+    "example": "Use dependency when working with AI image generation.",
+    "exampleZh": "相依套件",
+    "options": [
+      "相依套件",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "Python environment",
+    "meaning": "Python 環境",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：Python environment = Python 環境。",
+    "example": "Use Python environment when working with AI image generation.",
+    "exampleZh": "Python 環境",
+    "options": [
+      "Python 環境",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "CUDA",
+    "meaning": "NVIDIA 顯卡運算平台",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：CUDA = NVIDIA 顯卡運算平台。",
+    "example": "Use CUDA when working with AI image generation.",
+    "exampleZh": "NVIDIA 顯卡運算平台",
+    "options": [
+      "NVIDIA 顯卡運算平台",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "driver",
+    "meaning": "驅動程式",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：driver = 驅動程式。",
+    "example": "Use driver when working with AI image generation.",
+    "exampleZh": "驅動程式",
+    "options": [
+      "驅動程式",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "command line",
+    "meaning": "命令列",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：command line = 命令列。",
+    "example": "Use command line when working with AI image generation.",
+    "exampleZh": "命令列",
+    "options": [
+      "命令列",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  },
+  {
+    "word": "launch arguments",
+    "meaning": "啟動參數",
+    "phonetic": "",
+    "level": "AI",
+    "category": "AI 圖像生成",
+    "picture": "🛠️",
+    "memory": "AI 生圖詞彙：launch arguments = 啟動參數。",
+    "example": "Use launch arguments when working with AI image generation.",
+    "exampleZh": "啟動參數",
+    "options": [
+      "啟動參數",
+      "提示詞",
+      "模型參數",
+      "生成軟體"
+    ]
+  }
+];
+starterWords.push(...imageGenStarterWords);
+
+const imageGenPhraseBank = [
+  {
+    "en": "I want to generate an image from text.",
+    "zh": "我想用文字生成一張圖片。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Write a clear prompt for the subject, style, and lighting.",
+    "zh": "把主體、風格、光線寫清楚。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Put unwanted problems in the negative prompt.",
+    "zh": "把不想要的問題放在反向提示詞。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "This LoRA needs a trigger word.",
+    "zh": "這個 LoRA 需要觸發詞。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Lower the LoRA weight if the image looks too strong.",
+    "zh": "如果畫面效果太重，就降低 LoRA 權重。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Try a different checkpoint for a different style.",
+    "zh": "換不同主模型試試不同風格。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use a fixed seed to reproduce the result.",
+    "zh": "使用固定種子碼來重現結果。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Increase the steps for more detail, but it will be slower.",
+    "zh": "增加步數可以更細，但會更慢。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Lower the CFG scale if the image looks overcooked.",
+    "zh": "如果圖看起來太硬，就降低 CFG。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Change the aspect ratio for portrait or landscape images.",
+    "zh": "改長寬比來做直幅或橫幅圖片。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use txt2img for a new image.",
+    "zh": "用文生圖做新圖片。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use img2img to keep the original composition.",
+    "zh": "用圖生圖保留原本構圖。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use inpainting to fix only the selected area.",
+    "zh": "用局部重繪只修選取區域。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use outpainting to extend the image.",
+    "zh": "用向外補圖擴張畫面。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Turn on Hires fix for a sharper final image.",
+    "zh": "開啟高解析修復讓成圖更清楚。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use ControlNet to control the pose.",
+    "zh": "用 ControlNet 控制姿勢。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use a depth map to keep the 3D structure.",
+    "zh": "用深度圖保留立體結構。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use a reference image for the character face.",
+    "zh": "用參考圖固定角色臉。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "The mask should cover the area you want to repaint.",
+    "zh": "遮罩要蓋住你想重繪的區域。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Make it a close-up portrait with soft lighting.",
+    "zh": "做成柔光近距離人像。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use a low angle to make the character look powerful.",
+    "zh": "用低角度讓角色看起來更有氣勢。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Add depth of field and bokeh in the background.",
+    "zh": "加入景深和背景散景。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use cinematic lighting and warm color grading.",
+    "zh": "使用電影感光線和暖色調。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Make it photorealistic, not anime style.",
+    "zh": "做成照片寫實，不要動漫風。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Try watercolor style for a softer look.",
+    "zh": "試試水彩風格，畫面會更柔和。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "The hands need to be fixed.",
+    "zh": "手需要修正。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Make the character look at the viewer.",
+    "zh": "讓角色看向觀眾。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Change the outfit but keep the same face.",
+    "zh": "換服裝，但保留同一張臉。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Add bad hands and extra fingers to the negative prompt.",
+    "zh": "把爛手和多手指加進反向提示詞。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Remove the watermark and text from the image.",
+    "zh": "移除圖片中的浮水印和文字。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Regenerate it with a different seed.",
+    "zh": "換一個種子碼重新生成。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Open the PNG info to check the original parameters.",
+    "zh": "打開 PNG 資訊查看原始參數。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Queue the prompt in ComfyUI.",
+    "zh": "在 ComfyUI 裡把提示詞加入佇列。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Install the extension and restart the WebUI.",
+    "zh": "安裝擴充套件後重啟 WebUI。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Your VRAM is not enough for this resolution.",
+    "zh": "你的顯示卡記憶體不夠跑這個解析度。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Save the workflow so you can reuse it later.",
+    "zh": "儲存工作流，以後可以重複使用。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "The image is blurry, so increase sharpness or use an upscaler.",
+    "zh": "圖片太模糊，可以增加銳利度或使用放大器。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "Use the same seed and change only the prompt.",
+    "zh": "使用同一個種子碼，只改提示詞。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "The model does not understand this prompt well.",
+    "zh": "模型不太理解這個提示詞。",
+    "tag": "AI圖像生成"
+  },
+  {
+    "en": "This style preset makes the image more cinematic.",
+    "zh": "這個風格預設會讓圖片更有電影感。",
+    "tag": "AI圖像生成"
+  }
+];
+phraseBank.push(...imageGenPhraseBank);
 
 let state = loadState();
 let activeView = "cards";
